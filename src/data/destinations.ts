@@ -95,6 +95,7 @@ export const destinations: Destination[] = [
     ],
     gygSearchLink: `${GYG}/miami-beach-l181/?${PARTNER}`,
     relatedSlugs: ["key-west", "new-orleans", "south-padre-island"],
+    relatedBlogSlugs: ["best-hotels-south-beach-miami", "miami-beach-oceanfront-hotels-guide"],
   },
   {
     slug: "key-west",
