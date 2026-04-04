@@ -115,5 +115,6 @@ export const blogPosts: BlogPost[] = [
     category: "Travel Guide",
     metaDescription: "Plan the perfect weekend in Savannah, Georgia. Day-by-day itinerary with trolley tours, historic squares, best restaurants, ghost tours, and a Tybee Island day trip.",
     keywords: "weekend in savannah georgia, savannah itinerary, things to do savannah weekend, savannah travel guide, savannah georgia trip, savannah 2 day itinerary",
+    relatedDestinationSlug: "savannah",
   },
 ];
