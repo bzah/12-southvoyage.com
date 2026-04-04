@@ -91,6 +91,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tours",
     metaDescription: "The best food tours in New Orleans for 2026. Explore French Quarter restaurants, Cajun cooking classes, and Creole food walks with local guides.",
     keywords: "new orleans food tours, french quarter food tour, new orleans tours, cajun food tour new orleans",
+    relatedDestinationSlug: "new-orleans",
   },
   {
     slug: "best-things-to-do-key-west",
