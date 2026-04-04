@@ -55,6 +55,7 @@ export const blogPosts: BlogPost[] = [
     category: "Food & Dining",
     metaDescription: "Discover the 12 best restaurants in New Orleans French Quarter for 2026. Classic Creole cuisine, Cajun fine dining, romantic spots, and budget-friendly local favorites.",
     keywords: "best restaurants new orleans french quarter, french quarter restaurants, new orleans restaurants, where to eat french quarter, best food new orleans, cajun restaurants french quarter",
+    relatedDestinationSlug: "new-orleans",
   },
   {
     slug: "key-west-snorkeling-best-time-guide",
