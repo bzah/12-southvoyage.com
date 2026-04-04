@@ -17,6 +17,7 @@ export interface BlogPost {
   category: string;
   metaDescription: string;
   keywords: string;
+  relatedDestinationSlug?: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -30,6 +31,7 @@ export const blogPosts: BlogPost[] = [
     category: "Hotels",
     metaDescription: "Discover the best hotels in South Beach Miami for 2026. Oceanfront resorts, boutique Art Deco hotels, and budget-friendly stays with reviews and booking tips.",
     keywords: "best hotels south beach miami, south beach hotels, oceanfront hotels south beach miami, south beach miami hotel, miami beach oceanfront hotels",
+    relatedDestinationSlug: "south-beach-miami",
   },
   {
     slug: "miami-beach-oceanfront-hotels-guide",
@@ -41,6 +43,7 @@ export const blogPosts: BlogPost[] = [
     category: "Hotels",
     metaDescription: "Complete guide to Miami Beach oceanfront hotels. Compare Collins Avenue vs Ocean Drive, learn the best booking seasons, and find ocean-view rooms at every price point.",
     keywords: "miami beach oceanfront hotels, oceanfront hotels miami beach, miami beach hotels ocean view, collins avenue hotels miami, ocean drive hotels miami beach, beachfront hotels miami",
+    relatedDestinationSlug: "south-beach-miami",
   },
   {
     slug: "best-restaurants-new-orleans-french-quarter",
@@ -52,6 +55,7 @@ export const blogPosts: BlogPost[] = [
     category: "Food & Dining",
     metaDescription: "Discover the 12 best restaurants in New Orleans French Quarter for 2026. Classic Creole cuisine, Cajun fine dining, romantic spots, and budget-friendly local favorites.",
     keywords: "best restaurants new orleans french quarter, french quarter restaurants, new orleans restaurants, where to eat french quarter, best food new orleans, cajun restaurants french quarter",
+    relatedDestinationSlug: "new-orleans",
   },
   {
     slug: "key-west-snorkeling-best-time-guide",
@@ -63,6 +67,7 @@ export const blogPosts: BlogPost[] = [
     category: "Activities",
     metaDescription: "The best time to snorkel in Key West, Florida. Seasonal guide to water clarity, reef conditions, top snorkeling spots, tour prices, and expert tips for beginners.",
     keywords: "key west snorkeling best time, key west snorkeling, best snorkeling key west, key west reef snorkeling, when to snorkel key west, key west snorkeling tours",
+    relatedDestinationSlug: "key-west",
   },
   {
     slug: "how-to-choose-hotels-south-padre-island",
@@ -74,6 +79,7 @@ export const blogPosts: BlogPost[] = [
     category: "Hotels",
     metaDescription: "Learn how to choose the best hotels near South Padre Island. Beachfront condos, family resorts, and insider tips on the best areas and seasons to visit.",
     keywords: "south padre island hotels, hotels near south padre island, south padre island resorts, best hotels south padre island",
+    relatedDestinationSlug: "south-padre-island",
   },
   {
     slug: "top-food-tours-new-orleans",
@@ -85,6 +91,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tours",
     metaDescription: "The best food tours in New Orleans for 2026. Explore French Quarter restaurants, Cajun cooking classes, and Creole food walks with local guides.",
     keywords: "new orleans food tours, french quarter food tour, new orleans tours, cajun food tour new orleans",
+    relatedDestinationSlug: "new-orleans",
   },
   {
     slug: "best-things-to-do-key-west",
@@ -96,6 +103,7 @@ export const blogPosts: BlogPost[] = [
     category: "Activities",
     metaDescription: "Discover the 15 best things to do in Key West, Florida. Snorkeling, sunset cruises, historic sites, and water sports with booking tips and prices.",
     keywords: "things to do key west, key west activities, key west tours, key west snorkeling, best key west attractions",
+    relatedDestinationSlug: "key-west",
   },
   {
     slug: "perfect-weekend-savannah-georgia",
@@ -107,5 +115,6 @@ export const blogPosts: BlogPost[] = [
     category: "Travel Guide",
     metaDescription: "Plan the perfect weekend in Savannah, Georgia. Day-by-day itinerary with trolley tours, historic squares, best restaurants, ghost tours, and a Tybee Island day trip.",
     keywords: "weekend in savannah georgia, savannah itinerary, things to do savannah weekend, savannah travel guide, savannah georgia trip, savannah 2 day itinerary",
+    relatedDestinationSlug: "savannah",
   },
 ];

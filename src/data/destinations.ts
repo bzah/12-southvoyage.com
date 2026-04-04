@@ -42,6 +42,7 @@ export interface Destination {
   faqs: DestinationFaq[];
   gygSearchLink: string;
   relatedSlugs: string[];
+  relatedBlogSlugs: string[];
 }
 
 export const destinations: Destination[] = [
@@ -94,6 +95,7 @@ export const destinations: Destination[] = [
     ],
     gygSearchLink: `${GYG}/miami-beach-l181/?${PARTNER}`,
     relatedSlugs: ["key-west", "new-orleans", "south-padre-island"],
+    relatedBlogSlugs: ["best-hotels-south-beach-miami", "miami-beach-oceanfront-hotels-guide"],
   },
   {
     slug: "key-west",
@@ -143,6 +145,7 @@ export const destinations: Destination[] = [
     ],
     gygSearchLink: `${GYG}/key-west-l200/?${PARTNER}`,
     relatedSlugs: ["south-beach-miami", "south-padre-island", "savannah"],
+    relatedBlogSlugs: ["best-things-to-do-key-west", "key-west-snorkeling-best-time-guide"],
   },
   {
     slug: "new-orleans",
@@ -193,6 +196,7 @@ export const destinations: Destination[] = [
     ],
     gygSearchLink: `${GYG}/new-orleans-l60/?${PARTNER}`,
     relatedSlugs: ["south-beach-miami", "savannah", "south-padre-island"],
+    relatedBlogSlugs: ["top-food-tours-new-orleans", "best-restaurants-new-orleans-french-quarter"],
   },
   {
     slug: "south-padre-island",
@@ -242,6 +246,7 @@ export const destinations: Destination[] = [
     ],
     gygSearchLink: `${GYG}/south-padre-island-l4439/?${PARTNER}`,
     relatedSlugs: ["south-beach-miami", "key-west", "new-orleans"],
+    relatedBlogSlugs: ["how-to-choose-hotels-south-padre-island"],
   },
   {
     slug: "savannah",
@@ -292,6 +297,7 @@ export const destinations: Destination[] = [
     ],
     gygSearchLink: `${GYG}/savannah-l936/?${PARTNER}`,
     relatedSlugs: ["new-orleans", "key-west", "south-beach-miami"],
+    relatedBlogSlugs: ["perfect-weekend-savannah-georgia"],
   },
 ];
 

@@ -1,9 +1,10 @@
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Calendar, Clock, ArrowLeft } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, MapPin } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { blogPosts } from "@/data/blogPosts";
+import { getDestinationBySlug } from "@/data/destinations";
 import NotFound from "./NotFound";
 
 const PARTNER = "partner_id=0IQTGX8&utm_medium=online_publisher";
@@ -468,6 +469,44 @@ const BlogPost = () => {
             {articleContent[slug]}
           </div>
         </div>
+
+        {/* Destination CTA */}
+        {post.relatedDestinationSlug && (() => {
+          const dest = getDestinationBySlug(post.relatedDestinationSlug!);
+          if (!dest) return null;
+          return (
+            <section className="py-12 mt-16">
+              <div className="container mx-auto px-4 max-w-3xl">
+                <Link
+                  to={`/destinations/${dest.slug}`}
+                  className="group flex flex-col md:flex-row items-stretch rounded-2xl overflow-hidden border border-border shadow-card hover:shadow-elevated transition-all duration-300"
+                >
+                  <div className="md:w-2/5 aspect-[16/9] md:aspect-auto overflow-hidden">
+                    <img
+                      src={dest.heroImage}
+                      alt={`${dest.name} travel guide`}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                      width={400}
+                      height={300}
+                    />
+                  </div>
+                  <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-center bg-card">
+                    <div className="flex items-center gap-2 mb-2">
+                      <MapPin className="w-4 h-4 text-secondary" />
+                      <span className="font-body text-xs uppercase tracking-wider text-secondary font-semibold">Destination Guide</span>
+                    </div>
+                    <h3 className="font-display text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors mb-2">
+                      Explore {dest.name}
+                    </h3>
+                    <p className="font-body text-sm text-muted-foreground mb-4">{dest.tagline} — Hotels, tours, activities, and everything you need to plan your trip.</p>
+                    <span className="font-body text-sm font-semibold text-primary group-hover:underline">Read the Full Guide →</span>
+                  </div>
+                </Link>
+              </div>
+            </section>
+          );
+        })()}
 
         {/* Related posts */}
         <section className="py-20 bg-sand mt-16">
