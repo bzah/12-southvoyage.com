@@ -400,12 +400,11 @@ const articleContent: Record<string, React.ReactNode> = {
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = blogPosts.find((p) => p.slug === slug);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   if (!post || !slug || !articleContent[slug]) {
     return <NotFound />;
   }
-
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const jsonLd = {
     "@context": "https://schema.org",
