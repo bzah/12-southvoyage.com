@@ -53,6 +53,7 @@ const Footer = () => {
             <h4 className="font-display text-sm font-semibold text-sand mb-4 uppercase tracking-wider">Resources</h4>
             <ul className="space-y-2">
               <li><Link to="/blog" className="font-body text-sm text-sand/60 hover:text-primary transition-colors">Travel Blog</Link></li>
+              <li><Link to="/about" className="font-body text-sm text-sand/60 hover:text-primary transition-colors">About Us</Link></li>
               <li><Link to="/blog/best-hotels-south-beach-miami" className="font-body text-sm text-sand/60 hover:text-primary transition-colors">Best Hotels South Beach</Link></li>
               <li><Link to="/blog/how-to-choose-hotels-south-padre-island" className="font-body text-sm text-sand/60 hover:text-primary transition-colors">South Padre Island Hotels</Link></li>
               <li><Link to="/blog/top-food-tours-new-orleans" className="font-body text-sm text-sand/60 hover:text-primary transition-colors">New Orleans Food Tours</Link></li>
