@@ -43,6 +43,7 @@ export const blogPosts: BlogPost[] = [
     category: "Hotels",
     metaDescription: "Complete guide to Miami Beach oceanfront hotels. Compare Collins Avenue vs Ocean Drive, learn the best booking seasons, and find ocean-view rooms at every price point.",
     keywords: "miami beach oceanfront hotels, oceanfront hotels miami beach, miami beach hotels ocean view, collins avenue hotels miami, ocean drive hotels miami beach, beachfront hotels miami",
+    relatedDestinationSlug: "south-beach-miami",
   },
   {
     slug: "best-restaurants-new-orleans-french-quarter",
