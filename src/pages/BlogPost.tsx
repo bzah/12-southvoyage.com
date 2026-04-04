@@ -405,6 +405,8 @@ const BlogPost = () => {
     return <NotFound />;
   }
 
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -414,6 +416,26 @@ const BlogPost = () => {
     author: { "@type": "Organization", name: "SouthVoyage" },
     publisher: { "@type": "Organization", name: "SouthVoyage", url: "https://southvoyage.com" },
     mainEntityOfPage: `https://southvoyage.com/blog/${post.slug}`,
+  };
+
+  const faqJsonLd = post.faqs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: post.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  } : null;
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://southvoyage.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://southvoyage.com/blog" },
+      { "@type": "ListItem", position: 3, name: post.title, item: `https://southvoyage.com/blog/${post.slug}` },
+    ],
   };
 
   return (
@@ -428,6 +450,8 @@ const BlogPost = () => {
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://southvoyage.com/blog/${post.slug}`} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        {faqJsonLd && <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>}
+        <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
 
       <Navbar />
