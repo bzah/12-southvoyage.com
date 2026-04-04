@@ -45,6 +45,7 @@ const Index = () => {
         <DestinationsSection />
         <ToursSection />
         <HotelsSection />
+        <BlogPreviewSection />
       </main>
       <Footer />
     </>
