@@ -7,6 +7,11 @@ import blogNolaRestaurants from "@/assets/blog-nola-restaurants.jpg";
 import blogKeyWestSnorkeling from "@/assets/blog-key-west-snorkeling.jpg";
 import blogSavannahWeekend from "@/assets/blog-savannah-weekend.jpg";
 
+export interface BlogFaq {
+  question: string;
+  answer: string;
+}
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -18,6 +23,7 @@ export interface BlogPost {
   metaDescription: string;
   keywords: string;
   relatedDestinationSlug?: string;
+  faqs: BlogFaq[];
 }
 
 export const blogPosts: BlogPost[] = [
