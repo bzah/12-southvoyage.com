@@ -494,6 +494,37 @@ const BlogPost = () => {
           </div>
         </div>
 
+        {/* FAQ Section */}
+        {post.faqs.length > 0 && (
+          <section className="py-16 bg-sand">
+            <div className="container mx-auto px-4 max-w-3xl">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
+                Frequently Asked Questions
+              </h2>
+              <div className="space-y-3">
+                {post.faqs.map((faq, i) => (
+                  <div key={i} className="bg-card rounded-xl border border-border overflow-hidden">
+                    <button
+                      onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                      className="w-full flex items-center justify-between p-5 text-left"
+                    >
+                      <span className="font-display text-base font-semibold text-foreground pr-4">{faq.question}</span>
+                      <ChevronDown
+                        className={`w-5 h-5 text-muted-foreground shrink-0 transition-transform duration-200 ${openFaq === i ? "rotate-180" : ""}`}
+                      />
+                    </button>
+                    {openFaq === i && (
+                      <div className="px-5 pb-5 animate-fade-in">
+                        <p className="font-body text-sm text-muted-foreground leading-relaxed">{faq.answer}</p>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Destination CTA */}
         {post.relatedDestinationSlug && (() => {
           const dest = getDestinationBySlug(post.relatedDestinationSlug!);
