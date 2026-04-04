@@ -37,6 +37,16 @@ const DestinationPage = () => {
     })),
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://southvoyage.com/" },
+      { "@type": "ListItem", position: 2, name: "Destinations", item: "https://southvoyage.com/#destinations" },
+      { "@type": "ListItem", position: 3, name: dest.name, item: `https://southvoyage.com/destinations/${dest.slug}` },
+    ],
+  };
+
   return (
     <>
       <Helmet>
@@ -50,6 +60,7 @@ const DestinationPage = () => {
         <meta property="og:url" content={`https://southvoyage.com/destinations/${dest.slug}`} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
 
       <Navbar />

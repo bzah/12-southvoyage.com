@@ -21,6 +21,14 @@ const jsonLd = {
   sameAs: [],
 };
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://southvoyage.com/" },
+  ],
+};
+
 const Index = () => {
   return (
     <>
@@ -37,6 +45,7 @@ const Index = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://southvoyage.com/" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
 
       <Navbar />
