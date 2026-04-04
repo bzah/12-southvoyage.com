@@ -1,9 +1,10 @@
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Calendar, Clock, ArrowLeft } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, MapPin } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { blogPosts } from "@/data/blogPosts";
+import { getDestinationBySlug } from "@/data/destinations";
 import NotFound from "./NotFound";
 
 const PARTNER = "partner_id=0IQTGX8&utm_medium=online_publisher";
