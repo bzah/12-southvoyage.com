@@ -67,6 +67,7 @@ export const blogPosts: BlogPost[] = [
     category: "Activities",
     metaDescription: "The best time to snorkel in Key West, Florida. Seasonal guide to water clarity, reef conditions, top snorkeling spots, tour prices, and expert tips for beginners.",
     keywords: "key west snorkeling best time, key west snorkeling, best snorkeling key west, key west reef snorkeling, when to snorkel key west, key west snorkeling tours",
+    relatedDestinationSlug: "key-west",
   },
   {
     slug: "how-to-choose-hotels-south-padre-island",
