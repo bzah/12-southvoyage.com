@@ -164,6 +164,235 @@ const articleContent: Record<string, React.ReactNode> = {
       </div>
     </article>
   ),
+
+  "miami-beach-oceanfront-hotels-guide": (
+    <article className="prose-custom">
+      <p>Waking up to the sound of waves and stepping onto a balcony overlooking the turquoise Atlantic — that's the Miami Beach oceanfront hotel experience. But with hundreds of properties lining the coast from South Beach to Sunny Isles, choosing the right one can be overwhelming. This guide breaks down everything you need to know about booking the perfect oceanfront stay.</p>
+
+      <h2>Ocean Drive vs. Collins Avenue: Which Street Is Better?</h2>
+      <p><strong>Ocean Drive</strong> (South Beach, 1st–15th Street) is the iconic strip with Art Deco hotels directly facing the beach. These tend to be smaller, boutique-style properties with 30–80 rooms. They're perfect for travelers who want to be in the heart of the action — sidewalk cafes, people-watching, and the beach literally steps away. However, rooms can be noisy at night due to the nightlife below.</p>
+      <p><strong>Collins Avenue</strong> runs one block west and is home to the larger, more modern resort-style hotels. Properties here typically offer bigger rooms, rooftop pools, full-service spas, and more polished amenities. Many still have direct beach access via private walkways. For a balance of oceanfront living and quieter evenings, Collins Avenue is the smarter choice.</p>
+
+      <h2>Understanding Room Categories</h2>
+      <p>Miami Beach hotels use specific room categories that directly affect your view and price:</p>
+      <ul>
+        <li><strong>Ocean View</strong> — Partial ocean view, often from a side angle. $30–$80 less per night than Ocean Front.</li>
+        <li><strong>Ocean Front</strong> — Direct, unobstructed ocean view. The premium choice. Expect to pay $50–$150 more than a standard room.</li>
+        <li><strong>City View / Garden View</strong> — Faces away from the ocean. Significantly cheaper, sometimes 40% less than Ocean Front.</li>
+        <li><strong>Pool View</strong> — Overlooks the hotel pool. A good middle ground in price and atmosphere.</li>
+      </ul>
+      <p><strong>Pro tip:</strong> If you're on a budget, book a City View room at an oceanfront hotel. You'll still have beach access, pool access, and all resort amenities — just without the view from your room. You'll save $80–$200 per night.</p>
+
+      <h2>Best Areas Along Miami Beach</h2>
+      <h3>South Beach (1st–23rd Street)</h3>
+      <p>The most famous stretch. Art Deco charm, vibrant nightlife, and the widest sand beach. Hotels range from $180–$600/night. Best for nightlife seekers, couples, and first-time visitors.</p>
+
+      <h3>Mid-Beach (24th–63rd Street)</h3>
+      <p>Quieter and more upscale. Home to the Faena, Edition, and Fontainebleau — some of the most prestigious hotels in Miami. Hotels range from $300–$1,000/night. Best for luxury travelers and families who want beach without the party scene.</p>
+
+      <h3>North Beach / Surfside (64th–96th Street)</h3>
+      <p>Residential and relaxed. Fewer tourists, more local restaurants, beautiful uncrowded beaches. Hotels range from $150–$400/night. Best for extended stays and budget-conscious travelers who still want oceanfront.</p>
+
+      <h3>Bal Harbour / Sunny Isles (North of 96th)</h3>
+      <p>Ultra-luxury territory with towering condo-hotel skyscrapers and the upscale Bal Harbour Shops. Hotels range from $350–$1,200/night. Best for high-end travelers and shoppers.</p>
+
+      <h2>When to Book for the Best Rates</h2>
+      <ul>
+        <li><strong>Peak season (Dec–Apr):</strong> Highest prices, best weather. Book 2–3 months ahead.</li>
+        <li><strong>Shoulder season (May–Jun, Nov):</strong> 30–40% savings, still great weather. The sweet spot.</li>
+        <li><strong>Summer (Jul–Sep):</strong> Lowest rates (40–50% off peak), but hot, humid, and occasional storms.</li>
+        <li><strong>Book on Tuesday or Wednesday</strong> for the best online rates — hotel pricing algorithms typically lower rates mid-week.</li>
+      </ul>
+
+      <h2>What Amenities to Prioritize</h2>
+      <ul>
+        <li><strong>Beach service:</strong> Ask if the hotel provides complimentary beach chairs and umbrellas. Renting them separately costs $20–$40/day per set.</li>
+        <li><strong>Resort fee:</strong> Many Miami Beach hotels charge $25–$55/night in resort fees on top of the room rate. Factor this into your budget.</li>
+        <li><strong>Parking:</strong> Oceanfront hotels typically charge $30–$60/night for valet parking. If you don't need a car, skip it entirely — South Beach is very walkable.</li>
+        <li><strong>Pool quality:</strong> A great pool can make or break your stay. Rooftop pools with ocean views are the gold standard.</li>
+      </ul>
+
+      <div className="cta-box">
+        <h3>Explore Miami Beach</h3>
+        <p>Book top-rated tours, water sports, and activities along Miami Beach.</p>
+        <a href={`${GYG}/miami-beach-l181/?${PARTNER}`} target="_blank" rel="noopener noreferrer" className="cta-link">
+          Browse Miami Beach Tours →
+        </a>
+      </div>
+    </article>
+  ),
+
+  "best-restaurants-new-orleans-french-quarter": (
+    <article className="prose-custom">
+      <p>The French Quarter is where New Orleans' culinary legend was born. Within these historic blocks, you'll find restaurants that have been serving Creole masterpieces for over a century alongside exciting newcomers pushing Southern cuisine forward. Here are the 12 best restaurants in the French Quarter for 2026.</p>
+
+      <h2>1. Antoine's — Since 1840</h2>
+      <p>America's oldest family-run restaurant, Antoine's has been serving French-Creole cuisine for over 185 years. The Oysters Rockefeller were invented here in 1889. The dining rooms are grand, the service is old-school formal, and the Pommes de Terre Soufflées are legendary. Reservations essential. Entrées $28–$55.</p>
+
+      <h2>2. Galatoire's — Friday Lunch Institution</h2>
+      <p>Galatoire's Friday lunch is a New Orleans tradition — a multi-hour, multi-course, multi-cocktail affair that's as much social event as dining experience. The Trout Meunière and Shrimp Rémoulade are perfect. The downstairs dining room (no reservations, first-come-first-served) is where the magic happens. Business casual required. Entrées $25–$48.</p>
+
+      <h2>3. Arnaud's</h2>
+      <p>A grand Creole dining room with tile floors, ceiling fans, and impeccable service. The Shrimp Arnaud (cold shrimp in Creole rémoulade) is a must-order starter. The Filet de Boeuf and Bananas Foster are outstanding. Don't miss the Germaine Cazenave Wells Mardi Gras Museum upstairs. Entrées $30–$52.</p>
+
+      <h2>4. Café Du Monde — The Beignet Legend</h2>
+      <p>Open 24 hours (closed Christmas Day), Café Du Monde has been serving café au lait and powdered-sugar beignets since 1862. It's touristy, it's always crowded, and it's absolutely essential. Go at 2am for the shortest lines and most atmospheric experience. Cash only. Beignets $4.53 for an order of three.</p>
+
+      <h2>5. Brennan's</h2>
+      <p>Famous for inventing Bananas Foster in 1951, Brennan's offers elegant Creole dining in a stunning pink French Colonial building. The brunch is legendary — Eggs Hussarde and Turtle Soup are must-orders. The courtyard is one of the most romantic dining spots in the Quarter. Brunch entrées $18–$38, dinner $32–$55.</p>
+
+      <h2>6. GW Fins — Best Seafood</h2>
+      <p>Consistently rated one of the best seafood restaurants in the country. GW Fins sources fish from around the globe and prepares it with New Orleans flair. The Scalibut (lobster-crusted fish) and Seared Yellowfin Tuna are outstanding. Modern atmosphere, exceptional wine list. Entrées $32–$55.</p>
+
+      <h2>7. Sylvain — Neighborhood Bistro</h2>
+      <p>A cozy, candlelit neighborhood restaurant hidden in a courtyard off Chartres Street. Sylvain serves elevated Southern comfort food — fried chicken thighs with collard greens, roasted bone marrow, and an outstanding cheeseburger. Great cocktails. Entrées $18–$32.</p>
+
+      <h2>8. Mr. B's Bistro</h2>
+      <p>The Brennan family's more casual concept, Mr. B's is known for BBQ Shrimp (not what you'd expect — butter-poached shrimp in Worcestershire and pepper) and their Gumbo Ya Ya. Lively atmosphere, excellent cocktails, and a great jazz brunch on Sundays. Entrées $24–$42.</p>
+
+      <h2>9. Central Grocery — The Original Muffuletta</h2>
+      <p>This tiny Italian grocery on Decatur Street invented the muffuletta sandwich in 1906. A round sesame loaf stuffed with Italian meats, cheeses, and olive salad. A half is enough for most people. Cash only, take-out, and prepare to wait in line. Full muffuletta $19.</p>
+
+      <h2>10. Coop's Place — Dive Bar Dining</h2>
+      <p>Don't let the dive-bar atmosphere fool you — Coop's serves some of the best Cajun food in the Quarter. The Rabbit & Sausage Jambalaya is a legend, and the Fried Chicken is juicy perfection. No minors allowed. Cash only. Entrées $12–$22. Expect a line.</p>
+
+      <h2>11. Muriel's Jackson Square</h2>
+      <p>Beautiful dining rooms overlooking Jackson Square, with a resident ghost (seriously — they set a place for him). The Goat Cheese Croutons, Wood-Grilled Filet, and Bread Pudding Soufflé are outstanding. Balcony seating available. Entrées $28–$48.</p>
+
+      <h2>12. Felix's Restaurant & Oyster Bar</h2>
+      <p>A more laid-back alternative to the famous Acme Oyster House across the street, Felix's has been shucking since 1946. Chargrilled oysters, raw oysters, and a solid Gumbo in a casual, no-frills atmosphere. Oysters $16–$24/dozen.</p>
+
+      <h2>Tips for Dining in the French Quarter</h2>
+      <ul>
+        <li><strong>Make reservations</strong> for fine dining (Antoine's, Galatoire's, Arnaud's, Brennan's) — especially weekends</li>
+        <li><strong>Dress code:</strong> Upscale restaurants require business casual. No shorts, flip-flops, or tank tops</li>
+        <li><strong>Lunch is often cheaper</strong> than dinner at the same restaurants, with the same menu quality</li>
+        <li><strong>Ask locals</strong> where they eat — the best meal might be off the tourist path</li>
+        <li><strong>Take a food tour</strong> to sample multiple restaurants with historical context from a local guide</li>
+      </ul>
+
+      <div className="cta-box">
+        <h3>Book a French Quarter Food Tour</h3>
+        <p>Sample the best of New Orleans cuisine with an expert local guide.</p>
+        <a href={`${GYG}/new-orleans-l60/?q=food+tour&${PARTNER}`} target="_blank" rel="noopener noreferrer" className="cta-link">
+          Browse New Orleans Food Tours →
+        </a>
+      </div>
+    </article>
+  ),
+
+  "key-west-snorkeling-best-time-guide": (
+    <article className="prose-custom">
+      <p>Key West sits next to the only living coral barrier reef in North America — the Florida Reef, stretching 170 miles along the Florida Keys. Snorkeling here means swimming over colorful coral formations, spotting sea turtles, nurse sharks, and hundreds of tropical fish species. But timing matters. Here's everything you need to know about when, where, and how to snorkel in Key West.</p>
+
+      <h2>Best Time of Year to Snorkel in Key West</h2>
+
+      <h3>April – July: The Best Season (★★★★★)</h3>
+      <p>This is the prime snorkeling window. Water temperatures are comfortable (78–84°F), visibility is at its peak (60–100 feet), seas are calm, and marine life is most active. April–May offers the best balance of clear water, comfortable temperatures, and fewer crowds. June–July is warmer but slightly more prone to afternoon thunderstorms (which usually clear quickly).</p>
+
+      <h3>August – October: Good but Warmer (★★★★)</h3>
+      <p>Water temperatures reach 85°F+ and visibility remains good (40–70 feet). Hurricane season (June–November) brings occasional rough weather, but most days are still snorkeling-friendly. Book flexible tours with cancellation policies during this period. Prices are lower and crowds thinner.</p>
+
+      <h3>November – March: Cool but Clear (★★★)</h3>
+      <p>Water temperature drops to 70–76°F — comfortable with a wetsuit or rash guard but chilly without one. Visibility is variable (30–60 feet) due to winter swells. Wind and wave conditions can cancel trips more frequently. However, clear days in winter can offer exceptional visibility. Prices are lowest November and early December.</p>
+
+      <h2>Best Snorkeling Spots in Key West</h2>
+
+      <h3>1. The Dry Rocks (Most Popular)</h3>
+      <p>Home to the famous Christ of the Abyss statue — a 9-foot bronze statue submerged in 25 feet of water. The surrounding reef hosts elkhorn coral, brain coral, and schools of yellowtail snapper. Most tour boats stop here. Depth: 5–25 feet. Best for beginners and intermediate snorkelers.</p>
+
+      <h3>2. Sand Key Reef</h3>
+      <p>A beautiful shallow reef near the Sand Key Lighthouse, about 7 miles south of Key West. Large formations of star coral and fan coral, with frequent sightings of sea turtles, rays, and barracuda. Depth: 5–20 feet. Less crowded than Dry Rocks.</p>
+
+      <h3>3. Rock Key</h3>
+      <p>A vibrant reef with excellent coral coverage and diverse fish life. Parrotfish, angelfish, and sergeant majors are common here. Depth: 8–30 feet. Great for intermediate snorkelers who want more diverse marine life.</p>
+
+      <h3>4. Western Dry Rocks</h3>
+      <p>Further offshore (9 miles out), this site offers the clearest water and most diverse marine life in the Key West area. Reef sharks, eagle rays, and large groupers are frequently spotted. Depth: 15–65 feet. Better for confident swimmers. Fewer tour operators go here, so it's less crowded.</p>
+
+      <h2>What to Expect on a Snorkeling Tour</h2>
+      <ul>
+        <li><strong>Duration:</strong> Half-day tours last 3–4 hours; full-day trips run 6–7 hours with lunch</li>
+        <li><strong>Cost:</strong> $45–$95 per person for half-day; $85–$150 for full-day</li>
+        <li><strong>Equipment:</strong> Mask, snorkel, and fins are always included. Some tours provide wetsuits seasonally</li>
+        <li><strong>Group size:</strong> Large catamarans carry 40–100 people; smaller boats take 6–20 for a more intimate experience</li>
+        <li><strong>Departure:</strong> Morning trips (8–9am) typically have calmer water and better visibility than afternoon trips</li>
+      </ul>
+
+      <h2>Tips for the Best Experience</h2>
+      <ul>
+        <li><strong>Book morning departures</strong> — water is calmest and visibility is best before noon</li>
+        <li><strong>Choose a smaller boat</strong> if possible — less crowded reefs and more personal attention from guides</li>
+        <li><strong>Wear reef-safe sunscreen</strong> — chemical sunscreens damage coral. Look for mineral-based (zinc oxide) formulas</li>
+        <li><strong>Bring an underwater camera</strong> — many tours rent GoPro cameras or offer photo packages</li>
+        <li><strong>Don't touch the coral</strong> — it's alive and extremely fragile. Even light touches can kill coral polyps</li>
+        <li><strong>Take seasickness precautions</strong> — take Dramamine 30 minutes before departure if you're prone to motion sickness</li>
+      </ul>
+
+      <div className="cta-box">
+        <h3>Book Your Snorkeling Trip</h3>
+        <p>Reserve a top-rated Key West snorkeling tour with instant confirmation and free cancellation.</p>
+        <a href={`${GYG}/key-west-l200/?q=snorkeling&${PARTNER}`} target="_blank" rel="noopener noreferrer" className="cta-link">
+          Browse Key West Snorkeling Tours →
+        </a>
+      </div>
+    </article>
+  ),
+
+  "perfect-weekend-savannah-georgia": (
+    <article className="prose-custom">
+      <p>Savannah is the kind of city that wraps you in Southern charm from the moment you arrive. With its moss-draped oaks, meticulously preserved squares, and world-class food scene, it's the ideal weekend getaway. Here's how to make the most of 2–3 days in one of America's most beautiful cities.</p>
+
+      <h2>Day 1: Historic District & Southern Cuisine</h2>
+
+      <h3>Morning: Trolley Tour Overview</h3>
+      <p>Start with a <strong>hop-on hop-off trolley tour</strong> ($35, 1.5 hours for the full loop). This gives you an overview of the entire Historic District — all 22 squares, major landmarks, and neighborhoods — so you can decide what to explore in depth later. The narrated history is excellent and entertaining.</p>
+
+      <h3>Midday: Forsyth Park & Lunch</h3>
+      <p>Walk through <strong>Forsyth Park</strong>, Savannah's crown jewel. The iconic 1858 fountain is one of the most photographed landmarks in the South. Grab lunch at <strong>Collins Quarter</strong> on Bull Street — their Lavender Mocha and avocado toast are outstanding, or go classic Southern at <strong>Mrs. Wilkes' Dining Room</strong> (arrive by 10:30am for the communal-style lunch — fried chicken, collard greens, mac and cheese, and a dozen more dishes family-style).</p>
+
+      <h3>Afternoon: Explore the Squares</h3>
+      <p>Savannah has 22 original squares, each with unique character. The must-sees: <strong>Chippewa Square</strong> (the Forrest Gump bench scene), <strong>Monterey Square</strong> (Mercer Williams House from Midnight in the Garden of Good and Evil), and <strong>Lafayette Square</strong> (Cathedral of St. John the Baptist — stunning stained glass). Walk at your own pace, stopping for photos and people-watching.</p>
+
+      <h3>Evening: Dinner & Ghost Tour</h3>
+      <p>Dinner at <strong>The Olde Pink House</strong> — upscale Southern cuisine in a gorgeous 1771 Georgian mansion. Try the fried green tomatoes, she-crab soup, and crispy scored flounder. After dinner, take a <strong>haunted ghost walking tour</strong> ($25, 1.5 hours). Savannah is considered one of the most haunted cities in America, and the evening tours through dimly lit squares are genuinely atmospheric.</p>
+
+      <h2>Day 2: River Street, Art & SCAD</h2>
+
+      <h3>Morning: River Street & Brunch</h3>
+      <p>Start with brunch at <strong>Huey's on the River</strong> — beignets, Eggs Benedict, and river views. Then walk along <strong>River Street</strong>, the cobblestoned waterfront promenade lined with shops, galleries, and candy stores in converted cotton warehouses. Watch the massive container ships pass by on the Savannah River.</p>
+
+      <h3>Afternoon: SCAD Galleries & Shopping</h3>
+      <p>The <strong>Savannah College of Art and Design</strong> has transformed the city into an arts destination. Visit the <strong>SCAD Museum of Art</strong> (free admission) and browse student galleries throughout the Historic District. Then walk <strong>Broughton Street</strong> for shopping — a mix of local boutiques, galleries, and national retailers.</p>
+
+      <h3>Evening: Cocktails & Dinner</h3>
+      <p>Savannah allows open containers in the Historic District (plastic cups, 16oz limit) — so grab a to-go cocktail from <strong>The Alley Cat Lounge</strong> (speakeasy, ring the doorbell) or <strong>Artillery</strong> and stroll through the squares at golden hour. Dinner at <strong>The Grey</strong> (James Beard-nominated, reserve ahead) or <strong>Husk</strong> (Southern farm-to-table in a restored building).</p>
+
+      <h2>Day 3: Bonaventure Cemetery & Tybee Island</h2>
+
+      <h3>Morning: Bonaventure Cemetery</h3>
+      <p>Take a <strong>guided tour of Bonaventure Cemetery</strong> ($25, 2 hours) — one of the most hauntingly beautiful cemeteries in the world. Spanish moss drapes over Victorian-era monuments and live oaks, creating an atmosphere that's more peaceful garden than graveyard. The stories of the people buried here are fascinating.</p>
+
+      <h3>Afternoon: Tybee Island Beach Day</h3>
+      <p>Drive 20 minutes east to <strong>Tybee Island</strong> — Savannah's beach. It's a laid-back island with a wide, sandy beach, a historic lighthouse (climb 178 steps for panoramic views), and excellent seafood. Rent beach chairs, swim in the Atlantic, and have a late lunch at <strong>The Crab Shack</strong> — outdoor dining with low-country boil platters and views of the marsh.</p>
+
+      <h2>Budget Breakdown (Per Person)</h2>
+      <ul>
+        <li><strong>Hotel (2 nights):</strong> $300–$600 (Historic District B&B or boutique hotel)</li>
+        <li><strong>Food (3 days):</strong> $150–$300 (mix of casual and upscale dining)</li>
+        <li><strong>Tours & Activities:</strong> $80–$150 (trolley, ghost tour, cemetery tour)</li>
+        <li><strong>Total estimate:</strong> $530–$1,050 per person for a full weekend</li>
+      </ul>
+
+      <div className="cta-box">
+        <h3>Book Savannah Tours</h3>
+        <p>Reserve trolley tours, ghost walks, food tours, and Tybee Island excursions.</p>
+        <a href={`${GYG}/savannah-l936/?${PARTNER}`} target="_blank" rel="noopener noreferrer" className="cta-link">
+          Browse Savannah Tours →
+        </a>
+      </div>
+    </article>
+  ),
 };
 
 const BlogPost = () => {
