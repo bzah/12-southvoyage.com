@@ -145,6 +145,7 @@ export const destinations: Destination[] = [
     ],
     gygSearchLink: `${GYG}/key-west-l200/?${PARTNER}`,
     relatedSlugs: ["south-beach-miami", "south-padre-island", "savannah"],
+    relatedBlogSlugs: ["best-things-to-do-key-west", "key-west-snorkeling-best-time-guide"],
   },
   {
     slug: "new-orleans",
