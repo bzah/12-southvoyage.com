@@ -1,9 +1,10 @@
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { MapPin, Clock, Star, ArrowLeft, ChevronDown } from "lucide-react";
+import { MapPin, Clock, Star, ArrowLeft, ChevronDown, BookOpen } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { getDestinationBySlug, destinations } from "@/data/destinations";
+import { blogPosts } from "@/data/blogPosts";
 import NotFound from "./NotFound";
 import { useState } from "react";
 
