@@ -17,6 +17,7 @@ export interface BlogPost {
   category: string;
   metaDescription: string;
   keywords: string;
+  relatedDestinationSlug?: string;
 }
 
 export const blogPosts: BlogPost[] = [

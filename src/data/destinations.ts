@@ -42,6 +42,7 @@ export interface Destination {
   faqs: DestinationFaq[];
   gygSearchLink: string;
   relatedSlugs: string[];
+  relatedBlogSlugs: string[];
 }
 
 export const destinations: Destination[] = [
