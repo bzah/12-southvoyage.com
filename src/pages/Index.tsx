@@ -4,6 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import DestinationsSection from "@/components/DestinationsSection";
 import ToursSection from "@/components/ToursSection";
 import HotelsSection from "@/components/HotelsSection";
+import BlogPreviewSection from "@/components/BlogPreviewSection";
 import Footer from "@/components/Footer";
 
 const jsonLd = {
