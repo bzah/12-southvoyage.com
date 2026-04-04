@@ -196,6 +196,7 @@ export const destinations: Destination[] = [
     ],
     gygSearchLink: `${GYG}/new-orleans-l60/?${PARTNER}`,
     relatedSlugs: ["south-beach-miami", "savannah", "south-padre-island"],
+    relatedBlogSlugs: ["top-food-tours-new-orleans", "best-restaurants-new-orleans-french-quarter"],
   },
   {
     slug: "south-padre-island",
