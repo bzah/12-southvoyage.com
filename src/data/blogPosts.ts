@@ -79,6 +79,7 @@ export const blogPosts: BlogPost[] = [
     category: "Hotels",
     metaDescription: "Learn how to choose the best hotels near South Padre Island. Beachfront condos, family resorts, and insider tips on the best areas and seasons to visit.",
     keywords: "south padre island hotels, hotels near south padre island, south padre island resorts, best hotels south padre island",
+    relatedDestinationSlug: "south-padre-island",
   },
   {
     slug: "top-food-tours-new-orleans",
