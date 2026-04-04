@@ -211,7 +211,55 @@ const DestinationPage = () => {
           </div>
         </section>
 
-        {/* Related destinations */}
+        {/* Related blog articles */}
+        {relatedBlogs.length > 0 && (
+          <section className="py-16 bg-background">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-12">
+                <p className="font-body text-sm uppercase tracking-[0.2em] text-primary mb-3">
+                  Travel Guides & Tips
+                </p>
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
+                  Read More About {dest.name.split(",")[0]}
+                </h2>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                {relatedBlogs.map((post) => (
+                  <Link
+                    key={post.slug}
+                    to={`/blog/${post.slug}`}
+                    className="group bg-card rounded-2xl border border-border overflow-hidden hover:shadow-elevated transition-all duration-300 hover:-translate-y-1"
+                  >
+                    <div className="aspect-[16/9] overflow-hidden">
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                        width={800}
+                        height={450}
+                      />
+                    </div>
+                    <div className="p-5">
+                      <div className="flex items-center gap-2 mb-2">
+                        <BookOpen className="w-3.5 h-3.5 text-primary" />
+                        <span className="font-body text-xs uppercase tracking-wider text-primary font-semibold">{post.category}</span>
+                        <span className="font-body text-xs text-muted-foreground">· {post.readTime}</span>
+                      </div>
+                      <h3 className="font-display text-lg font-semibold text-foreground group-hover:text-primary transition-colors leading-snug mb-2">
+                        {post.title}
+                      </h3>
+                      <p className="font-body text-sm text-muted-foreground line-clamp-2">{post.excerpt}</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
             <h2 className="font-display text-2xl font-bold text-foreground mb-8 text-center">
