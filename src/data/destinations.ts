@@ -297,6 +297,7 @@ export const destinations: Destination[] = [
     ],
     gygSearchLink: `${GYG}/savannah-l936/?${PARTNER}`,
     relatedSlugs: ["new-orleans", "key-west", "south-beach-miami"],
+    relatedBlogSlugs: ["perfect-weekend-savannah-georgia"],
   },
 ];
 

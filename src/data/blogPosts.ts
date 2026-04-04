@@ -31,7 +31,7 @@ export const blogPosts: BlogPost[] = [
     category: "Hotels",
     metaDescription: "Discover the best hotels in South Beach Miami for 2026. Oceanfront resorts, boutique Art Deco hotels, and budget-friendly stays with reviews and booking tips.",
     keywords: "best hotels south beach miami, south beach hotels, oceanfront hotels south beach miami, south beach miami hotel, miami beach oceanfront hotels",
-  },
+    relatedDestinationSlug: "south-beach-miami",
   {
     slug: "miami-beach-oceanfront-hotels-guide",
     title: "Miami Beach Oceanfront Hotels: Complete Booking Guide",
