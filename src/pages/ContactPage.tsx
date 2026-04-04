@@ -1,0 +1,90 @@
+import { Helmet } from "react-helmet-async";
+import { Mail, MessageSquare, MapPin } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://southvoyage.com/" },
+    { "@type": "ListItem", position: 2, name: "Contact", item: "https://southvoyage.com/contact" },
+  ],
+};
+
+const ContactPage = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Contact Us — SouthVoyage</title>
+        <meta name="description" content="Get in touch with the SouthVoyage team. Questions about Southern USA travel, partnership inquiries, or content corrections — we're here to help." />
+        <link rel="canonical" href="https://southvoyage.com/contact" />
+        <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
+      </Helmet>
+
+      <Navbar />
+      <main className="pt-16">
+        <section className="bg-sand py-20">
+          <div className="container mx-auto px-4 text-center max-w-3xl">
+            <p className="font-body text-sm uppercase tracking-[0.2em] text-primary mb-3">Contact</p>
+            <h1 className="font-display text-4xl md:text-6xl font-bold text-foreground mb-6">Get in Touch</h1>
+            <p className="font-body text-lg text-muted-foreground">
+              Have a question, suggestion, or partnership inquiry? We'd love to hear from you.
+            </p>
+          </div>
+        </section>
+
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+              {[
+                { icon: Mail, title: "Email Us", desc: "contact@southvoyage.com", sub: "We respond within 24–48 hours" },
+                { icon: MessageSquare, title: "Content Corrections", desc: "editor@southvoyage.com", sub: "Help us keep info accurate" },
+                { icon: MapPin, title: "Coverage Area", desc: "Southern United States", sub: "FL, LA, GA, TX & expanding" },
+              ].map((item) => (
+                <div key={item.title} className="bg-card rounded-2xl border border-border p-8 text-center">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                    <item.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-display text-lg font-bold text-foreground mb-2">{item.title}</h3>
+                  <p className="font-body text-sm font-semibold text-primary mb-1">{item.desc}</p>
+                  <p className="font-body text-xs text-muted-foreground">{item.sub}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="max-w-2xl mx-auto">
+              <h2 className="font-display text-2xl font-bold text-foreground mb-6">Send Us a Message</h2>
+              <form onSubmit={(e) => e.preventDefault()} className="space-y-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label className="font-body text-sm font-medium text-foreground mb-1.5 block">Name</label>
+                    <input type="text" className="w-full px-4 py-3 rounded-xl border border-border bg-card font-body text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30" placeholder="Your name" />
+                  </div>
+                  <div>
+                    <label className="font-body text-sm font-medium text-foreground mb-1.5 block">Email</label>
+                    <input type="email" className="w-full px-4 py-3 rounded-xl border border-border bg-card font-body text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30" placeholder="you@email.com" />
+                  </div>
+                </div>
+                <div>
+                  <label className="font-body text-sm font-medium text-foreground mb-1.5 block">Subject</label>
+                  <input type="text" className="w-full px-4 py-3 rounded-xl border border-border bg-card font-body text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30" placeholder="What's this about?" />
+                </div>
+                <div>
+                  <label className="font-body text-sm font-medium text-foreground mb-1.5 block">Message</label>
+                  <textarea rows={5} className="w-full px-4 py-3 rounded-xl border border-border bg-card font-body text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 resize-none" placeholder="Tell us more..." />
+                </div>
+                <button type="submit" className="bg-gradient-ocean px-8 py-3.5 rounded-full font-body font-semibold text-primary-foreground hover:opacity-90 transition-opacity">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+};
+
+export default ContactPage;
