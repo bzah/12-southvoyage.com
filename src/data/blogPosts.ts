@@ -7,6 +7,11 @@ import blogNolaRestaurants from "@/assets/blog-nola-restaurants.jpg";
 import blogKeyWestSnorkeling from "@/assets/blog-key-west-snorkeling.jpg";
 import blogSavannahWeekend from "@/assets/blog-savannah-weekend.jpg";
 
+export interface BlogFaq {
+  question: string;
+  answer: string;
+}
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -18,6 +23,7 @@ export interface BlogPost {
   metaDescription: string;
   keywords: string;
   relatedDestinationSlug?: string;
+  faqs: BlogFaq[];
 }
 
 export const blogPosts: BlogPost[] = [
@@ -32,6 +38,12 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "Discover the best hotels in South Beach Miami for 2026. Oceanfront resorts, boutique Art Deco hotels, and budget-friendly stays with reviews and booking tips.",
     keywords: "best hotels south beach miami, south beach hotels, oceanfront hotels south beach miami, south beach miami hotel, miami beach oceanfront hotels",
     relatedDestinationSlug: "south-beach-miami",
+    faqs: [
+      { question: "What is the best area to stay in South Beach Miami?", answer: "The best area is between 5th and 20th Street along Collins Avenue or Ocean Drive. This stretch puts you within walking distance of the beach, Art Deco Historic District, Lincoln Road shops, and the best restaurants. Ocean Drive is livelier while Collins Avenue is slightly quieter." },
+      { question: "How much do hotels in South Beach Miami cost per night?", answer: "Budget hotels start around $120–$200/night on side streets. Mid-range oceanfront hotels run $250–$450/night. Luxury resorts range from $500–$1,200/night. Prices are highest December–April (peak season) and drop 30–50% in summer months." },
+      { question: "When is the cheapest time to book a South Beach hotel?", answer: "The cheapest time is May–June or September–November, when hotel rates drop 30–50% compared to peak season (December–April). Weather is still warm and beaches are less crowded. Book on Tuesdays or Wednesdays for the best online rates." },
+      { question: "Do South Beach hotels include beach chairs?", answer: "Most mid-range and luxury hotels provide complimentary beach chairs and umbrellas for guests. Budget hotels usually do not — expect to pay $20–$40 per day to rent a beach chair and umbrella set on the public beach." },
+    ],
   },
   {
     slug: "miami-beach-oceanfront-hotels-guide",
@@ -44,6 +56,12 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "Complete guide to Miami Beach oceanfront hotels. Compare Collins Avenue vs Ocean Drive, learn the best booking seasons, and find ocean-view rooms at every price point.",
     keywords: "miami beach oceanfront hotels, oceanfront hotels miami beach, miami beach hotels ocean view, collins avenue hotels miami, ocean drive hotels miami beach, beachfront hotels miami",
     relatedDestinationSlug: "south-beach-miami",
+    faqs: [
+      { question: "What is the difference between Ocean View and Ocean Front rooms?", answer: "Ocean View rooms offer a partial or angled ocean view, typically $30–$80 less per night. Ocean Front rooms face the ocean directly with unobstructed views and cost $50–$150 more than standard rooms. City/Garden View rooms face away from the ocean and are 40% cheaper." },
+      { question: "Is Collins Avenue or Ocean Drive better for hotels?", answer: "Collins Avenue is generally better — hotels are larger, more modern, with bigger rooms, rooftop pools, and full-service spas. Many still have direct beach access. Ocean Drive hotels are smaller boutique properties in Art Deco buildings, perfect for ambiance but can be noisy at night due to nightlife." },
+      { question: "What are resort fees at Miami Beach hotels?", answer: "Most Miami Beach hotels charge mandatory resort fees of $25–$55 per night on top of the room rate. These typically cover WiFi, pool access, and beach amenities. Always factor resort fees into your total budget when comparing hotel prices." },
+      { question: "How much is parking at oceanfront hotels in Miami Beach?", answer: "Valet parking at oceanfront hotels typically costs $30–$60 per night. If you don't need a car, you can save significantly — South Beach is very walkable, and rideshare services are readily available for trips outside the neighborhood." },
+    ],
   },
   {
     slug: "best-restaurants-new-orleans-french-quarter",
@@ -56,6 +74,11 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "Discover the 12 best restaurants in New Orleans French Quarter for 2026. Classic Creole cuisine, Cajun fine dining, romantic spots, and budget-friendly local favorites.",
     keywords: "best restaurants new orleans french quarter, french quarter restaurants, new orleans restaurants, where to eat french quarter, best food new orleans, cajun restaurants french quarter",
     relatedDestinationSlug: "new-orleans",
+    faqs: [
+      { question: "Do I need reservations at French Quarter restaurants?", answer: "Yes, for upscale restaurants like Antoine's, Commander's Palace, and Brennan's, book 1–2 weeks ahead (especially during Mardi Gras and Jazz Fest). Casual spots like Café Du Monde and Central Grocery are first-come, first-served." },
+      { question: "What is the average meal cost in the French Quarter?", answer: "Casual dining runs $15–$25 per person. Mid-range restaurants average $30–$55. Fine dining entrées range from $35–$65. Budget tip: many upscale restaurants offer more affordable lunch menus with the same quality food." },
+      { question: "What dishes should I try in the French Quarter?", answer: "Must-try dishes include: gumbo, crawfish étouffée, beignets at Café Du Monde, po'boys (shrimp or oyster), muffuletta sandwiches, jambalaya, Oysters Rockefeller, and pralines. Don't skip the bread pudding with whiskey sauce." },
+    ],
   },
   {
     slug: "key-west-snorkeling-best-time-guide",
@@ -68,6 +91,12 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "The best time to snorkel in Key West, Florida. Seasonal guide to water clarity, reef conditions, top snorkeling spots, tour prices, and expert tips for beginners.",
     keywords: "key west snorkeling best time, key west snorkeling, best snorkeling key west, key west reef snorkeling, when to snorkel key west, key west snorkeling tours",
     relatedDestinationSlug: "key-west",
+    faqs: [
+      { question: "What is the best month to snorkel in Key West?", answer: "April through July offers the best snorkeling conditions with water visibility of 60–100 feet, calm seas, and warm water temperatures of 78–84°F. April–May is the sweet spot with fewer crowds and excellent clarity." },
+      { question: "How much do Key West snorkeling tours cost?", answer: "Half-day snorkeling tours start at $45–$65 per person and include equipment. Full-day trips to remote reef sites run $85–$130. Private charters cost $400–$800 for groups of up to 6 people." },
+      { question: "Can beginners snorkel in Key West?", answer: "Absolutely! Key West reefs are ideal for beginners — the water is calm, shallow (8–25 feet), and warm year-round. Tour operators provide all equipment and brief instruction. Many tours include flotation devices for extra comfort." },
+      { question: "What marine life will I see snorkeling in Key West?", answer: "Common sightings include tropical fish (parrotfish, angelfish, sergeant majors), sea turtles, nurse sharks, stingrays, lobsters, and colorful coral formations. The reef is part of the only living coral barrier reef in North America." },
+    ],
   },
   {
     slug: "how-to-choose-hotels-south-padre-island",
@@ -80,6 +109,11 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "Learn how to choose the best hotels near South Padre Island. Beachfront condos, family resorts, and insider tips on the best areas and seasons to visit.",
     keywords: "south padre island hotels, hotels near south padre island, south padre island resorts, best hotels south padre island",
     relatedDestinationSlug: "south-padre-island",
+    faqs: [
+      { question: "What is the best area to stay on South Padre Island?", answer: "Mid-island is best for families (quieter beaches, good balance). The south end near the causeway is best for nightlife and restaurants. The north end is most secluded and ideal for relaxation with larger resort properties." },
+      { question: "Are condos or hotels better on South Padre Island?", answer: "Condos are the most popular choice — they offer full kitchens, multiple bedrooms, and more space at $150–$350/night. They're perfect for families and groups. Hotels are better for short stays and solo travelers at $80–$200/night." },
+      { question: "When is the cheapest time to visit South Padre Island?", answer: "September–October and April–May offer the best combination of good weather and lower prices. Spring Break (March) is the most expensive. Summer is popular with families but still more affordable than peak Spring Break rates." },
+    ],
   },
   {
     slug: "top-food-tours-new-orleans",
@@ -92,6 +126,11 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "The best food tours in New Orleans for 2026. Explore French Quarter restaurants, Cajun cooking classes, and Creole food walks with local guides.",
     keywords: "new orleans food tours, french quarter food tour, new orleans tours, cajun food tour new orleans",
     relatedDestinationSlug: "new-orleans",
+    faqs: [
+      { question: "How much do food tours in New Orleans cost?", answer: "Walking food tours range from $35–$75 per person with food included. Cajun cooking classes cost $50–$120 per person. Most tours last 2.5–3 hours and visit 5–7 restaurants." },
+      { question: "Should I book food tours in advance?", answer: "Yes, book at least a few days ahead. Popular tours sell out, especially during Mardi Gras season (January–March) and Jazz Fest (late April–early May). Morning tours in summer help avoid the heat." },
+      { question: "Are food tours worth it in New Orleans?", answer: "Absolutely. New Orleans has thousands of restaurants, and guided tours take you to the best spots — including hidden gems. Local guides share history, culture, and cooking secrets you won't find on your own. The food alone is worth more than the ticket price." },
+    ],
   },
   {
     slug: "best-things-to-do-key-west",
@@ -104,6 +143,11 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "Discover the 15 best things to do in Key West, Florida. Snorkeling, sunset cruises, historic sites, and water sports with booking tips and prices.",
     keywords: "things to do key west, key west activities, key west tours, key west snorkeling, best key west attractions",
     relatedDestinationSlug: "key-west",
+    faqs: [
+      { question: "How many days do you need in Key West?", answer: "3–4 days is ideal to cover the top attractions, enjoy a snorkeling trip, catch a sunset at Mallory Square, and explore Duval Street. A long weekend works for a highlights-only trip." },
+      { question: "What is the #1 thing to do in Key West?", answer: "Snorkeling at the coral reef is the top activity. Key West sits next to North America's only living coral barrier reef, with crystal-clear water and abundant marine life. Half-day trips start at $45." },
+      { question: "Is Key West expensive to visit?", answer: "Key West is moderately expensive. Budget travelers can get by on $150–$200/day (budget hotel, casual dining, 1 activity). Mid-range is $300–$500/day. Luxury can exceed $800/day. Many free activities like Mallory Square sunset and beach time help balance costs." },
+    ],
   },
   {
     slug: "perfect-weekend-savannah-georgia",
@@ -116,5 +160,10 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "Plan the perfect weekend in Savannah, Georgia. Day-by-day itinerary with trolley tours, historic squares, best restaurants, ghost tours, and a Tybee Island day trip.",
     keywords: "weekend in savannah georgia, savannah itinerary, things to do savannah weekend, savannah travel guide, savannah georgia trip, savannah 2 day itinerary",
     relatedDestinationSlug: "savannah",
+    faqs: [
+      { question: "Is 2 days enough for Savannah?", answer: "Yes, 2 days is enough to see the highlights — the Historic District, Forsyth Park, River Street, and a ghost tour. Add a 3rd day for a Tybee Island beach trip and deeper exploration of the garden district." },
+      { question: "What is the best time to visit Savannah?", answer: "March–May and October–November offer the best weather (70–80°F) and fewer crowds. March–April is peak for azalea blooms in the squares. Summer (June–September) is hot and humid but has lower hotel rates." },
+      { question: "What food is Savannah known for?", answer: "Savannah is known for shrimp and grits, fried green tomatoes, Lowcountry boil, pralines, banana pudding, and sweet tea. Mrs. Wilkes' Dining Room is legendary for family-style Southern comfort food — arrive early, the line starts at 10 AM." },
+    ],
   },
 ];

@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Calendar, Clock, ArrowLeft, MapPin } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, MapPin, ChevronDown } from "lucide-react";
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { blogPosts } from "@/data/blogPosts";
@@ -399,6 +400,7 @@ const articleContent: Record<string, React.ReactNode> = {
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = blogPosts.find((p) => p.slug === slug);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   if (!post || !slug || !articleContent[slug]) {
     return <NotFound />;
@@ -415,6 +417,26 @@ const BlogPost = () => {
     mainEntityOfPage: `https://southvoyage.com/blog/${post.slug}`,
   };
 
+  const faqJsonLd = post.faqs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: post.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  } : null;
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://southvoyage.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://southvoyage.com/blog" },
+      { "@type": "ListItem", position: 3, name: post.title, item: `https://southvoyage.com/blog/${post.slug}` },
+    ],
+  };
+
   return (
     <>
       <Helmet>
@@ -427,6 +449,8 @@ const BlogPost = () => {
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://southvoyage.com/blog/${post.slug}`} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        {faqJsonLd && <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>}
+        <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
 
       <Navbar />
@@ -469,6 +493,37 @@ const BlogPost = () => {
             {articleContent[slug]}
           </div>
         </div>
+
+        {/* FAQ Section */}
+        {post.faqs.length > 0 && (
+          <section className="py-16 bg-sand">
+            <div className="container mx-auto px-4 max-w-3xl">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
+                Frequently Asked Questions
+              </h2>
+              <div className="space-y-3">
+                {post.faqs.map((faq, i) => (
+                  <div key={i} className="bg-card rounded-xl border border-border overflow-hidden">
+                    <button
+                      onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                      className="w-full flex items-center justify-between p-5 text-left"
+                    >
+                      <span className="font-display text-base font-semibold text-foreground pr-4">{faq.question}</span>
+                      <ChevronDown
+                        className={`w-5 h-5 text-muted-foreground shrink-0 transition-transform duration-200 ${openFaq === i ? "rotate-180" : ""}`}
+                      />
+                    </button>
+                    {openFaq === i && (
+                      <div className="px-5 pb-5 animate-fade-in">
+                        <p className="font-body text-sm text-muted-foreground leading-relaxed">{faq.answer}</p>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Destination CTA */}
         {post.relatedDestinationSlug && (() => {

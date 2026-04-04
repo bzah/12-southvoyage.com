@@ -5,6 +5,15 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { blogPosts } from "@/data/blogPosts";
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://southvoyage.com/" },
+    { "@type": "ListItem", position: 2, name: "Blog", item: "https://southvoyage.com/blog" },
+  ],
+};
+
 const BlogIndex = () => {
   return (
     <>
@@ -15,6 +24,7 @@ const BlogIndex = () => {
           content="Read expert travel guides for the American South. Hotel reviews, tour recommendations, and insider tips for South Beach, Key West, New Orleans & more."
         />
         <link rel="canonical" href="https://southvoyage.com/blog" />
+        <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
 
       <Navbar />
