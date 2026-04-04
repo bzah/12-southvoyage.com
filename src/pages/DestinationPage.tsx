@@ -16,6 +16,7 @@ const DestinationPage = () => {
   if (!dest) return <NotFound />;
 
   const related = destinations.filter((d) => dest.relatedSlugs.includes(d.slug));
+  const relatedBlogs = blogPosts.filter((p) => dest.relatedBlogSlugs.includes(p.slug));
 
   const jsonLd = {
     "@context": "https://schema.org",
