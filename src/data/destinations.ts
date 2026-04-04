@@ -246,6 +246,7 @@ export const destinations: Destination[] = [
     ],
     gygSearchLink: `${GYG}/south-padre-island-l4439/?${PARTNER}`,
     relatedSlugs: ["south-beach-miami", "key-west", "new-orleans"],
+    relatedBlogSlugs: ["how-to-choose-hotels-south-padre-island"],
   },
   {
     slug: "savannah",
