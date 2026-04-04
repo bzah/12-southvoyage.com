@@ -103,6 +103,7 @@ export const blogPosts: BlogPost[] = [
     category: "Activities",
     metaDescription: "Discover the 15 best things to do in Key West, Florida. Snorkeling, sunset cruises, historic sites, and water sports with booking tips and prices.",
     keywords: "things to do key west, key west activities, key west tours, key west snorkeling, best key west attractions",
+    relatedDestinationSlug: "key-west",
   },
   {
     slug: "perfect-weekend-savannah-georgia",
