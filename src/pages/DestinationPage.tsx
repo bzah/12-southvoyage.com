@@ -24,6 +24,12 @@ const DestinationPage = () => {
 
   const related = destinations.filter((d) => dest.relatedSlugs.includes(d.slug));
   const relatedBlogs = blogPosts.filter((p) => dest.relatedBlogSlugs.includes(p.slug));
+  const destinationName = dest.name.split(",")[0];
+  const planningHighlights = [
+    `Stay close to the main visitor zone in ${destinationName} if you want to walk between food, nightlife, and top attractions.`,
+    `Book your headline tour first, then choose a hotel area that reduces transfers and keeps mornings easy.`,
+    `Use the related guides below to compare neighborhoods, seasonal timing, and the best-value experiences before you click through.`,
+  ];
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -115,7 +121,7 @@ const DestinationPage = () => {
                 >
                   <p className="font-display text-lg font-semibold text-foreground">{topicLabels[topic]}</p>
                   <p className="mt-2 font-body text-sm text-muted-foreground">
-                    Dedicated SEO landing page for {dest.name.split(",")[0]} {topicLabels[topic].toLowerCase()} keywords.
+                Dedicated SEO landing page for {destinationName} {topicLabels[topic].toLowerCase()} keywords.
                   </p>
                 </Link>
               ))}
@@ -144,7 +150,7 @@ const DestinationPage = () => {
                 Book Experiences
               </p>
                 <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3">
-                Top Tours & Activities in {dest.name.split(",")[0]}
+                Top Tours & Activities in {destinationName}
               </h2>
             </div>
 
@@ -183,8 +189,39 @@ const DestinationPage = () => {
                 rel="noopener noreferrer"
                 className="inline-block w-full sm:w-auto bg-gradient-ocean px-8 py-4 rounded-full font-body font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
               >
-                Browse All {dest.name.split(",")[0]} Tours
+                Browse All {destinationName} Tours
               </a>
+            </div>
+
+            <div className="mt-10 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-6 max-w-5xl mx-auto">
+              <div className="rounded-2xl border border-border bg-card p-6 sm:p-8">
+                <p className="font-body text-sm uppercase tracking-[0.2em] text-secondary mb-3">Local planning strategy</p>
+                <h3 className="font-display text-2xl font-bold text-foreground mb-4">What converts better than a generic tour list</h3>
+                <ul className="space-y-3">
+                  {planningHighlights.map((highlight) => (
+                    <li key={highlight} className="font-body text-sm leading-relaxed text-muted-foreground border-b border-border pb-3 last:border-b-0 last:pb-0">
+                      {highlight}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="rounded-2xl border border-border bg-card p-6 sm:p-8 flex flex-col justify-between">
+                <div>
+                  <p className="font-body text-sm uppercase tracking-[0.2em] text-primary mb-3">Affiliate booking</p>
+                  <h3 className="font-display text-2xl font-bold text-foreground mb-3">See more tours and activity dates</h3>
+                  <p className="font-body text-sm leading-relaxed text-muted-foreground mb-5">
+                    Travelers who have already read a destination summary usually respond best to a direct search CTA with clear intent.
+                  </p>
+                </div>
+                <a
+                  href={dest.gygSearchLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block w-full bg-gradient-ocean px-6 py-4 rounded-full text-center font-body font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
+                >
+                  Search {destinationName} Activities
+                </a>
+              </div>
             </div>
           </div>
         </section>
@@ -197,14 +234,17 @@ const DestinationPage = () => {
                 Where to Stay
               </p>
                 <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3">
-                Best Hotel Areas in {dest.name.split(",")[0]}
+                Best Hotel Areas in {destinationName}
               </h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {dest.hotelAreas.map((area) => (
-                <div
+                <a
                   key={area.name}
+                  href={dest.gygSearchLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-card rounded-2xl border border-border p-6"
                 >
                   <div className="flex flex-col sm:flex-row items-start justify-between mb-2 gap-2">
@@ -214,8 +254,39 @@ const DestinationPage = () => {
                     </span>
                   </div>
                   <p className="font-body text-sm text-muted-foreground">{area.description}</p>
-                </div>
+                  <span className="mt-4 inline-block font-body text-sm font-semibold text-primary group-hover:underline">
+                    Check stays in this area →
+                  </span>
+                </a>
               ))}
+            </div>
+
+            <div className="mt-10 rounded-2xl border border-border bg-sand p-6 sm:p-8">
+              <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-6 items-start">
+                <div>
+                  <p className="font-body text-sm uppercase tracking-[0.2em] text-coral mb-3">Hotel booking notes</p>
+                  <h3 className="font-display text-2xl font-bold text-foreground mb-4">Where readers usually book next</h3>
+                  <p className="font-body text-sm leading-relaxed text-muted-foreground mb-4">
+                    HCMC-style travel publishers convert hotel traffic by pairing neighborhood advice, sample price bands, and a direct path into availability search. This section does the same without cluttering the guide.
+                  </p>
+                  <p className="font-body text-sm leading-relaxed text-muted-foreground">
+                    Encourage readers to compare 2–3 hotel areas first, then click through once they know whether they want walkability, beach access, nightlife, or quieter family-friendly stays.
+                  </p>
+                </div>
+                <a
+                  href={dest.gygSearchLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-2xl border border-border bg-card p-6 block hover:shadow-elevated transition-shadow"
+                >
+                  <p className="font-body text-sm uppercase tracking-[0.2em] text-primary mb-3">Search stays</p>
+                  <h4 className="font-display text-2xl font-bold text-foreground mb-3">Compare {destinationName} hotel options</h4>
+                  <p className="font-body text-sm leading-relaxed text-muted-foreground mb-5">
+                    Open more listings, dates, and price options for this destination in one click.
+                  </p>
+                  <span className="font-body text-sm font-semibold text-primary">Browse Hotels & Packages →</span>
+                </a>
+              </div>
             </div>
           </div>
         </section>
