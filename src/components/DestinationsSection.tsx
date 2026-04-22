@@ -4,71 +4,41 @@ import destNewOrleans from "@/assets/dest-new-orleans.jpg";
 import destSouthPadre from "@/assets/dest-south-padre.jpg";
 import destMiamiBeach from "@/assets/dest-miami-beach.jpg";
 import destSavannah from "@/assets/dest-savannah.jpg";
+import { useI18n } from "@/lib/i18n";
 
 const destinations = [
-  {
-    name: "South Beach, Miami",
-    description: "Iconic Art Deco architecture, world-class nightlife, and pristine white sand beaches along Ocean Drive.",
-    image: destMiamiBeach,
-    slug: "south-beach-miami",
-    tag: "Most Popular",
-  },
-  {
-    name: "Key West",
-    description: "The southernmost point of the US, famous for stunning sunsets, Hemingway's home, and vibrant coral reefs.",
-    image: destKeyWest,
-    slug: "key-west",
-    tag: "Island Paradise",
-  },
-  {
-    name: "New Orleans",
-    description: "The birthplace of jazz, legendary Cajun cuisine, and the unforgettable energy of the French Quarter.",
-    image: destNewOrleans,
-    slug: "new-orleans",
-    tag: "Culture & Music",
-  },
-  {
-    name: "South Padre Island",
-    description: "Texas' premier beach destination with dolphin watching, deep-sea fishing, and year-round sunshine.",
-    image: destSouthPadre,
-    slug: "south-padre-island",
-    tag: "Beach Escape",
-  },
-  {
-    name: "Savannah",
-    description: "Charming squares draped in Spanish moss, historic architecture, and Southern hospitality at its finest.",
-    image: destSavannah,
-    slug: "savannah",
-    tag: "Historic South",
-  },
-];
+  { image: destMiamiBeach, slug: "south-beach-miami" },
+  { image: destKeyWest, slug: "key-west" },
+  { image: destNewOrleans, slug: "new-orleans" },
+  { image: destSouthPadre, slug: "south-padre-island" },
+  { image: destSavannah, slug: "savannah" },
+] as const;
 
 const DestinationsSection = () => {
+  const { content } = useI18n();
+  const section = content.home.destinations;
+
   return (
     <section id="destinations" className="py-24 bg-sand">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <p className="font-body text-sm uppercase tracking-[0.2em] text-primary mb-3">
-            Where to Go
+            {section.eyebrow}
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Top Southern Destinations
+            {section.title}
           </h2>
-          <p className="font-body text-muted-foreground max-w-xl mx-auto">
-            Explore the most captivating cities and beaches across the American South,
-            each offering unforgettable experiences and warm hospitality.
-          </p>
+          <p className="font-body text-muted-foreground max-w-xl mx-auto">{section.description}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* First card - featured large */}
           <Link
             to={`/destinations/${destinations[0].slug}`}
             className="md:col-span-2 lg:col-span-2 group relative rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-shadow duration-300 aspect-[2/1]"
           >
             <img
               src={destinations[0].image}
-              alt={`${destinations[0].name} - Southern USA travel destination`}
+              alt={`${section.cards[0].name} - Southern USA travel destination`}
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               loading="lazy"
               width={800}
@@ -77,38 +47,40 @@ const DestinationsSection = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/20 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
               <span className="inline-block bg-gradient-ocean px-3 py-1 rounded-full text-xs font-body font-semibold text-primary-foreground mb-3">
-                {destinations[0].tag}
+                {section.cards[0].tag}
               </span>
-              <h3 className="font-display text-2xl md:text-3xl font-bold text-sand mb-2">{destinations[0].name}</h3>
-              <p className="font-body text-sand/80 text-sm md:text-base max-w-lg">{destinations[0].description}</p>
+              <h3 className="font-display text-2xl md:text-3xl font-bold text-sand mb-2">{section.cards[0].name}</h3>
+              <p className="font-body text-sand/80 text-sm md:text-base max-w-lg">{section.cards[0].description}</p>
             </div>
           </Link>
 
-          {/* Remaining cards */}
-          {destinations.slice(1).map((dest) => (
-            <Link
-              key={dest.name}
-              to={`/destinations/${dest.slug}`}
-              className="group relative rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-shadow duration-300 aspect-[4/5]"
-            >
-              <img
-                src={dest.image}
-                alt={`${dest.name} - Southern USA travel destination`}
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
-                width={800}
-                height={600}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/10 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <span className="inline-block bg-gradient-sunset px-3 py-1 rounded-full text-xs font-body font-semibold text-primary-foreground mb-3">
-                  {dest.tag}
-                </span>
-                <h3 className="font-display text-xl font-bold text-sand mb-1">{dest.name}</h3>
-                <p className="font-body text-sand/80 text-sm">{dest.description}</p>
-              </div>
-            </Link>
-          ))}
+          {destinations.slice(1).map((dest, index) => {
+            const item = section.cards[index + 1];
+            return (
+              <Link
+                key={dest.slug}
+                to={`/destinations/${dest.slug}`}
+                className="group relative rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-shadow duration-300 aspect-[4/5]"
+              >
+                <img
+                  src={dest.image}
+                  alt={`${item.name} - Southern USA travel destination`}
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                  width={800}
+                  height={600}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/10 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <span className="inline-block bg-gradient-sunset px-3 py-1 rounded-full text-xs font-body font-semibold text-primary-foreground mb-3">
+                    {item.tag}
+                  </span>
+                  <h3 className="font-display text-xl font-bold text-sand mb-1">{item.name}</h3>
+                  <p className="font-body text-sand/80 text-sm">{item.description}</p>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>

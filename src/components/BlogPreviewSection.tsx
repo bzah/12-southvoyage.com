@@ -1,22 +1,23 @@
 import { Link } from "react-router-dom";
 import { blogPosts } from "@/data/blogPosts";
 import { Calendar, Clock } from "lucide-react";
+import { useI18n } from "@/lib/i18n";
 
 const BlogPreviewSection = () => {
+  const { content } = useI18n();
+  const section = content.home.blog;
+
   return (
     <section id="blog" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <p className="font-body text-sm uppercase tracking-[0.2em] text-primary mb-3">
-            Travel Guides & Tips
+            {section.eyebrow}
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
-            From the Blog
+            {section.title}
           </h2>
-          <p className="font-body text-muted-foreground max-w-xl mx-auto">
-            Expert travel guides, hotel reviews, and insider tips to help you plan
-            the perfect Southern getaway.
-          </p>
+          <p className="font-body text-muted-foreground max-w-xl mx-auto">{section.description}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -64,7 +65,7 @@ const BlogPreviewSection = () => {
             to="/blog"
             className="inline-block border-2 border-primary px-8 py-4 rounded-full font-body font-semibold text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
           >
-            View All Articles
+            {section.viewAll}
           </Link>
         </div>
       </div>
