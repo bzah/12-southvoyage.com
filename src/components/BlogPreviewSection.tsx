@@ -3,6 +3,9 @@ import { blogPosts } from "@/data/blogPosts";
 import { Calendar, Clock } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 
+const PARTNER = "partner_id=0IQTGX8&utm_medium=online_publisher";
+const GYG = "https://www.getyourguide.com";
+
 const BlogPreviewSection = () => {
   const { content } = useI18n();
   const section = content.home.blog;
@@ -58,6 +61,37 @@ const BlogPreviewSection = () => {
               </div>
             </Link>
           ))}
+        </div>
+
+        <div className="mt-12 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-6">
+          <div className="rounded-2xl border border-border bg-card p-6 sm:p-8">
+            <p className="font-body text-sm uppercase tracking-[0.2em] text-primary mb-3">More planning content</p>
+            <h3 className="font-display text-2xl font-bold text-foreground mb-4">Guide-style articles that move readers closer to booking</h3>
+            <p className="font-body text-sm leading-relaxed text-muted-foreground mb-4">
+              Our hotel guides, food roundups, snorkeling explainers, and weekend itineraries are written to answer the exact questions travelers ask before they reserve activities or choose where to stay.
+            </p>
+            <p className="font-body text-sm leading-relaxed text-muted-foreground">
+              This denser editorial approach mirrors successful city-guide publishers: more useful local detail, more decision-support, and clearer paths into tours and hotel searches.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-border bg-card p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <p className="font-body text-sm uppercase tracking-[0.2em] text-secondary mb-3">Affiliate shortcut</p>
+              <h3 className="font-display text-2xl font-bold text-foreground mb-3">See trending bookable experiences</h3>
+              <p className="font-body text-sm leading-relaxed text-muted-foreground mb-5">
+                Send readers straight from inspiration into activities they can reserve now across the American South.
+              </p>
+            </div>
+            <a
+              href={`${GYG}/s/?q=southern+usa+activities&${PARTNER}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block w-full bg-gradient-ocean px-6 py-4 rounded-full text-center font-body font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
+            >
+              Browse Popular Activities
+            </a>
+          </div>
         </div>
 
         <div className="text-center mt-12">
