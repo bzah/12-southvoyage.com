@@ -11,6 +11,15 @@ const breadcrumbJsonLd = {
   ],
 };
 
+const webPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Cookie Policy — SouthVoyage",
+  url: "https://southvoyage.com/cookies",
+  description:
+    "SouthVoyage Cookie Policy explaining website cookies, analytics, affiliate tracking, and how to manage cookie settings.",
+};
+
 const CookiePolicyPage = () => {
   return (
     <>
@@ -19,6 +28,7 @@ const CookiePolicyPage = () => {
         <meta name="description" content="SouthVoyage Cookie Policy explaining website cookies, analytics, affiliate tracking, and how to manage cookie settings." />
         <meta name="keywords" content="southvoyage cookie policy, travel website cookies, affiliate tracking cookies, analytics cookies policy, manage browser cookies" />
         <link rel="canonical" href="https://southvoyage.com/cookies" />
+        <script type="application/ld+json">{JSON.stringify(webPageJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
 

@@ -11,6 +11,15 @@ const breadcrumbJsonLd = {
   ],
 };
 
+const webPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Terms of Service — SouthVoyage",
+  url: "https://southvoyage.com/terms",
+  description:
+    "SouthVoyage Terms of Service covering website use, affiliate links, bookings, intellectual property, and liability limits.",
+};
+
 const TermsPage = () => {
   return (
     <>
@@ -19,6 +28,7 @@ const TermsPage = () => {
         <meta name="description" content="SouthVoyage Terms of Service covering website use, affiliate links, bookings, intellectual property, and liability limits." />
         <meta name="keywords" content="southvoyage terms of service, travel website terms and conditions, affiliate disclaimer terms, southern usa travel guide legal terms" />
         <link rel="canonical" href="https://southvoyage.com/terms" />
+        <script type="application/ld+json">{JSON.stringify(webPageJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
 

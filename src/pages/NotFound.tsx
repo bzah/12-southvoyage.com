@@ -4,6 +4,15 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+const notFoundJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Page Not Found — SouthVoyage",
+  description:
+    "The page you're looking for doesn't exist. Explore Southern USA travel destinations, hotels, and tours on SouthVoyage.",
+  url: "https://southvoyage.com/404",
+};
+
 const NotFound = () => {
   const location = useLocation();
 
@@ -17,6 +26,7 @@ const NotFound = () => {
         <title>Page Not Found — SouthVoyage</title>
         <meta name="robots" content="noindex, nofollow" />
         <meta name="description" content="The page you're looking for doesn't exist. Explore Southern USA travel destinations, hotels, and tours on SouthVoyage." />
+        <script type="application/ld+json">{JSON.stringify(notFoundJsonLd)}</script>
       </Helmet>
       <Navbar />
       <main className="flex min-h-[60vh] items-center justify-center bg-background px-4">

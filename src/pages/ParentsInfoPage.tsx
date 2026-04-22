@@ -12,6 +12,15 @@ const breadcrumbJsonLd = {
   ],
 };
 
+const webPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Parents Info — SouthVoyage",
+  url: "https://southvoyage.com/parents-info",
+  description:
+    "SouthVoyage Parents Info covering children's privacy, COPPA compliance, online safety, and parental controls.",
+};
+
 const ParentsInfoPage = () => {
   return (
     <>
@@ -20,6 +29,7 @@ const ParentsInfoPage = () => {
         <meta name="description" content="SouthVoyage Parents Info covering children's privacy, COPPA compliance, online safety, and parental controls." />
         <meta name="keywords" content="southvoyage parents info, children's privacy policy, coppa compliance website, online safety for families, parental controls travel website" />
         <link rel="canonical" href="https://southvoyage.com/parents-info" />
+        <script type="application/ld+json">{JSON.stringify(webPageJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
 
