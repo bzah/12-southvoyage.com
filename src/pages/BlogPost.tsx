@@ -456,7 +456,7 @@ const BlogPost = () => {
       <Navbar />
       <main className="pt-16">
         {/* Hero */}
-        <div className="relative aspect-[21/9] max-h-[480px] overflow-hidden">
+        <div className="relative aspect-[4/3] sm:aspect-[21/9] max-h-[420px] sm:max-h-[480px] overflow-hidden">
           <img
             src={post.image}
             alt={post.title}
@@ -467,8 +467,8 @@ const BlogPost = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-foreground/10" />
         </div>
 
-        <div className="container mx-auto px-4 max-w-3xl -mt-20 relative z-10">
-          <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elevated border border-border">
+        <div className="container mx-auto px-4 max-w-3xl -mt-8 sm:-mt-20 relative z-10">
+          <div className="bg-card rounded-2xl p-5 sm:p-8 md:p-12 shadow-elevated border border-border">
             <Link to="/blog" className="inline-flex items-center gap-1 text-primary font-body text-sm font-medium hover:underline mb-6">
               <ArrowLeft className="w-4 h-4" /> Back to Blog
             </Link>
@@ -477,11 +477,11 @@ const BlogPost = () => {
               {post.category}
             </span>
 
-            <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4 leading-tight">
+            <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 leading-tight">
               {post.title}
             </h1>
 
-            <div className="flex items-center gap-4 text-sm font-body text-muted-foreground mb-10">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-2 sm:gap-4 text-sm font-body text-muted-foreground mb-8 sm:mb-10">
               <span className="flex items-center gap-1">
                 <Calendar className="w-4 h-4" /> {post.date}
               </span>
@@ -506,7 +506,7 @@ const BlogPost = () => {
                   <div key={i} className="bg-card rounded-xl border border-border overflow-hidden">
                     <button
                       onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                      className="w-full flex items-center justify-between p-5 text-left"
+                      className="w-full flex items-center justify-between p-4 sm:p-5 text-left"
                     >
                       <span className="font-display text-base font-semibold text-foreground pr-4">{faq.question}</span>
                       <ChevronDown
@@ -547,7 +547,7 @@ const BlogPost = () => {
                     />
                   </div>
                   <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-center bg-card">
-                    <div className="flex items-center gap-2 mb-2">
+                    <div className="flex flex-wrap items-center gap-2 mb-2">
                       <MapPin className="w-4 h-4 text-secondary" />
                       <span className="font-body text-xs uppercase tracking-wider text-secondary font-semibold">Destination Guide</span>
                     </div>
