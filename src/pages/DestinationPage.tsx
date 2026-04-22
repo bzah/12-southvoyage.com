@@ -7,6 +7,13 @@ import { getDestinationBySlug, destinations } from "@/data/destinations";
 import { blogPosts } from "@/data/blogPosts";
 import NotFound from "./NotFound";
 import { useState } from "react";
+import { destinationTopics } from "@/lib/destinationTopics";
+
+const topicLabels = {
+  hotels: "Hotels",
+  tours: "Tours",
+  "things-to-do": "Things to Do",
+} as const;
 
 const DestinationPage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -90,6 +97,21 @@ const DestinationPage = () => {
             <p className="font-body text-lg leading-relaxed text-muted-foreground mb-12">
               {dest.introText}
             </p>
+
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-3 mb-12">
+              {destinationTopics.map((topic) => (
+                <Link
+                  key={topic}
+                  to={`/destinations/${dest.slug}/${topic}`}
+                  className="rounded-2xl border border-border bg-card p-5 transition-colors hover:border-primary/40 hover:bg-primary/5"
+                >
+                  <p className="font-display text-lg font-semibold text-foreground">{topicLabels[topic]}</p>
+                  <p className="mt-2 font-body text-sm text-muted-foreground">
+                    Dedicated SEO landing page for {dest.name.split(",")[0]} {topicLabels[topic].toLowerCase()} keywords.
+                  </p>
+                </Link>
+              ))}
+            </div>
 
             {dest.sections.map((section, i) => (
               <div key={i} className="mb-12">

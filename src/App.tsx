@@ -9,6 +9,7 @@ import Index from "./pages/Index.tsx";
 import BlogIndex from "./pages/BlogIndex.tsx";
 import BlogPost from "./pages/BlogPost.tsx";
 import DestinationPage from "./pages/DestinationPage.tsx";
+import DestinationTopicPage from "./pages/DestinationTopicPage.tsx";
 import AboutPage from "./pages/AboutPage.tsx";
 import ContactPage from "./pages/ContactPage.tsx";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.tsx";
@@ -34,6 +35,7 @@ const App = () => (
               <Route path="/blog" element={<BlogIndex />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/destinations/:slug" element={<DestinationPage />} />
+              <Route path="/destinations/:slug/:topic" element={<DestinationTopicPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/privacy" element={<PrivacyPolicyPage />} />
