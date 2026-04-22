@@ -1,11 +1,13 @@
 import { FormEvent, useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 import { Mail, MessageSquare, MapPin } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import { useI18n } from "@/lib/i18n";
+import { buildAlternateLinks, getLanguagePath, ogLocaleByLanguage } from "@/lib/seo";
 
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
@@ -26,10 +28,13 @@ const initialFormState = {
 const icons = [Mail, MessageSquare, MapPin] as const;
 
 const ContactPage = () => {
+  const location = useLocation();
   const [formData, setFormData] = useState(initialFormState);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { content } = useI18n();
+  const { content, language } = useI18n();
   const contact = content.contact;
+  const canonicalUrl = getLanguagePath(location.pathname, language);
+  const alternateLinks = buildAlternateLinks(location.pathname);
 
   const contactPageJsonLd = {
     "@context": "https://schema.org",
@@ -85,7 +90,11 @@ const ContactPage = () => {
         <title>{contact.metaTitle}</title>
         <meta name="description" content={contact.metaDescription} />
         <meta name="keywords" content={contact.metaKeywords} />
-        <link rel="canonical" href="https://southvoyage.com/contact" />
+        <link rel="canonical" href={canonicalUrl} />
+        {alternateLinks.map((link) => (
+          <link key={link.hrefLang} rel="alternate" hrefLang={link.hrefLang} href={link.href} />
+        ))}
+        <meta property="og:locale" content={ogLocaleByLanguage[language]} />
         <script type="application/ld+json">{JSON.stringify(contactPageJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>

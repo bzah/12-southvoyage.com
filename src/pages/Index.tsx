@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import DestinationsSection from "@/components/DestinationsSection";
@@ -7,6 +8,7 @@ import HotelsSection from "@/components/HotelsSection";
 import BlogPreviewSection from "@/components/BlogPreviewSection";
 import Footer from "@/components/Footer";
 import { useI18n } from "@/lib/i18n";
+import { buildAlternateLinks, getLanguagePath, ogLocaleByLanguage } from "@/lib/seo";
 
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
@@ -15,8 +17,11 @@ const breadcrumbJsonLd = {
 };
 
 const Index = () => {
-  const { content } = useI18n();
+  const { content, language } = useI18n();
+  const location = useLocation();
   const home = content.home;
+  const canonicalUrl = getLanguagePath(location.pathname, language);
+  const alternateLinks = buildAlternateLinks(location.pathname);
 
   const travelAgencyJsonLd = {
     "@context": "https://schema.org",
@@ -61,11 +66,15 @@ const Index = () => {
         <title>{home.metaTitle}</title>
         <meta name="description" content={home.metaDescription} />
         <meta name="keywords" content={home.metaKeywords} />
-        <link rel="canonical" href="https://southvoyage.com/" />
+        <link rel="canonical" href={canonicalUrl} />
+        {alternateLinks.map((link) => (
+          <link key={link.hrefLang} rel="alternate" hrefLang={link.hrefLang} href={link.href} />
+        ))}
         <meta property="og:title" content={home.ogTitle} />
         <meta property="og:description" content={home.ogDescription} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://southvoyage.com/" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:locale" content={ogLocaleByLanguage[language]} />
         <script type="application/ld+json">{JSON.stringify(travelAgencyJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(websiteJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(organizationJsonLd)}</script>

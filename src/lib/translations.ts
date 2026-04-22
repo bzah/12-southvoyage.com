@@ -632,7 +632,7 @@ export const translations = {
     home: {
       metaTitle: "Guide du Sud des États-Unis | SouthVoyage",
       metaDescription:
-        "Guide du sud des États-Unis avec hôtels à South Beach, tours à Key West, food à La Nouvelle-Orléans et conseils pour Savannah.",
+        "Guide du sud des États-Unis avec hôtels à South Beach, tours à Key West, gastronomie à La Nouvelle-Orléans et conseils pour Savannah.",
       metaKeywords:
         "voyage sud des états-unis, hôtels south beach miami, meilleurs hôtels south beach, hôtels front de mer miami beach, tours key west, snorkeling key west, tours nouvelle-orléans, hôtels south padre island, guide savannah georgie",
       ogTitle: "SouthVoyage — Découvrez le sud des États-Unis",
@@ -863,7 +863,7 @@ export const translations = {
     contact: {
       metaTitle: "Contact SouthVoyage | Aide voyage",
       metaDescription:
-        "Contactez SouthVoyage pour voyages dans le sud des États-Unis, hôtels, tours, partenariats, presse et corrections de contenu.",
+        "Contactez SouthVoyage pour conseils voyage dans le sud des États-Unis, hôtels, tours, partenariats, presse et corrections.",
       metaKeywords:
         "contact southvoyage, aide voyage sud états-unis, questions south beach, conseils key west, contact nouvelle-orléans, partenariats southvoyage",
       heroEyebrow: "Contact",
@@ -908,7 +908,7 @@ export const translations = {
     home: {
       metaTitle: "Гид по югу США | SouthVoyage",
       metaDescription:
-        "Гид по югу США: отели South Beach, туры Key West, еда New Orleans и советы для Savannah и South Padre Island.",
+        "Гид по югу США: отели South Beach, туры Key West, кухня New Orleans и советы для Savannah и South Padre Island.",
       metaKeywords:
         "путешествия по югу сша, отели south beach miami, лучшие отели south beach, отели у океана miami beach, туры key west, снорклинг key west, туры new orleans, отели south padre island, гид savannah",
       ogTitle: "SouthVoyage — откройте юг США",
@@ -1051,7 +1051,7 @@ export const translations = {
     about: {
       metaTitle: "О SouthVoyage | Гид по югу США",
       metaDescription:
-        "Узнайте о SouthVoyage — гиде по югу США для South Beach, Key West, New Orleans, Savannah и South Padre Island.",
+        "Узнайте о SouthVoyage — вашем гиде по югу США для South Beach, Key West, New Orleans, Savannah и South Padre Island.",
       metaKeywords:
         "о southvoyage, гид по югу сша, гид south beach miami, гид key west, путешествие new orleans, гид savannah, отдых south padre island",
       ogDescription:
@@ -1139,7 +1139,7 @@ export const translations = {
     contact: {
       metaTitle: "Контакты SouthVoyage | Помощь в поездке",
       metaDescription:
-        "Свяжитесь с SouthVoyage по поездкам по югу США, отелям, турам, партнерствам, прессе и исправлениям контента.",
+        "Свяжитесь с SouthVoyage по поездкам по югу США, отелям, турам, партнёрствам, прессе и исправлениям контента.",
       metaKeywords:
         "контакты southvoyage, помощь по путешествиям юг сша, вопросы south beach, советы key west, контакты new orleans, партнерство southvoyage",
       heroEyebrow: "Контакты",
