@@ -65,6 +65,14 @@ const DestinationPage = () => {
         <meta property="og:description" content={dest.metaDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://southvoyage.com/destinations/${dest.slug}`} />
+        <meta property="og:image" content={`https://southvoyage.com/social/destinations/${dest.slug}.png`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content={`${dest.name} travel guide social share image`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={dest.metaTitle} />
+        <meta name="twitter:description" content={dest.metaDescription} />
+        <meta name="twitter:image" content={`https://southvoyage.com/social/destinations/${dest.slug}.png`} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>

@@ -39,6 +39,18 @@ const BlogIndex = () => {
         />
         <meta name="keywords" content="southern usa travel blog, south beach miami travel tips, key west travel guide, new orleans food tours, savannah weekend itinerary, south padre island hotel guide, southern usa hotel reviews, best things to do in key west, travel tips american south" />
         <link rel="canonical" href="https://southvoyage.com/blog" />
+        <meta property="og:title" content="Southern USA Travel Blog | SouthVoyage" />
+        <meta property="og:description" content="Southern USA travel blog with South Beach hotel guides, Key West tips, New Orleans food, Savannah itineraries, and South Padre advice." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://southvoyage.com/blog" />
+        <meta property="og:image" content="https://southvoyage.com/social/blog-og.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="SouthVoyage blog social share image" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Southern USA Travel Blog | SouthVoyage" />
+        <meta name="twitter:description" content="Southern USA travel blog with South Beach hotel guides, Key West tips, New Orleans food, Savannah itineraries, and South Padre advice." />
+        <meta name="twitter:image" content="https://southvoyage.com/social/blog-og.png" />
         <script type="application/ld+json">{JSON.stringify(blogIndexJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
