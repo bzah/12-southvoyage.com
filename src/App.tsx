@@ -4,6 +4,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import AnalyticsTracker from "@/components/AnalyticsTracker";
 import { I18nProvider } from "@/lib/i18n";
 import Index from "./pages/Index.tsx";
 import BlogIndex from "./pages/BlogIndex.tsx";
@@ -27,6 +28,7 @@ const App = () => (
     <HelmetProvider>
       <BrowserRouter>
         <I18nProvider>
+          <AnalyticsTracker />
           <TooltipProvider>
             <Toaster />
             <Sonner />
