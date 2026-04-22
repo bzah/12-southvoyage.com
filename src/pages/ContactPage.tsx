@@ -1,7 +1,10 @@
+import { FormEvent, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Mail, MessageSquare, MapPin } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
 
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
@@ -12,7 +15,46 @@ const breadcrumbJsonLd = {
   ],
 };
 
+const initialFormState = {
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
+};
+
 const ContactPage = () => {
+  const [formData, setFormData] = useState(initialFormState);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    if (isSubmitting) return;
+
+    setIsSubmitting(true);
+
+    const { error } = await supabase.functions.invoke("send-contact-email", {
+      body: formData,
+    });
+
+    setIsSubmitting(false);
+
+    if (error) {
+      toast({
+        title: "Message not sent",
+        description: "Please try again in a moment or email us directly.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    toast({
+      title: "Message sent",
+      description: "Thanks for reaching out — we’ll get back to you soon.",
+    });
+    setFormData(initialFormState);
+  };
+
   return (
     <>
       <Helmet>
@@ -55,27 +97,27 @@ const ContactPage = () => {
 
             <div className="max-w-2xl mx-auto">
               <h2 className="font-display text-2xl font-bold text-foreground mb-6">Send Us a Message</h2>
-              <form onSubmit={(e) => e.preventDefault()} className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label className="font-body text-sm font-medium text-foreground mb-1.5 block">Name</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-xl border border-border bg-card font-body text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30" placeholder="Your name" />
+                    <input type="text" value={formData.name} onChange={(e) => setFormData((current) => ({ ...current, name: e.target.value }))} className="w-full px-4 py-3 rounded-xl border border-border bg-card font-body text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30" placeholder="Your name" required autoComplete="name" />
                   </div>
                   <div>
                     <label className="font-body text-sm font-medium text-foreground mb-1.5 block">Email</label>
-                    <input type="email" className="w-full px-4 py-3 rounded-xl border border-border bg-card font-body text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30" placeholder="you@email.com" />
+                    <input type="email" value={formData.email} onChange={(e) => setFormData((current) => ({ ...current, email: e.target.value }))} className="w-full px-4 py-3 rounded-xl border border-border bg-card font-body text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30" placeholder="you@email.com" required autoComplete="email" />
                   </div>
                 </div>
                 <div>
                   <label className="font-body text-sm font-medium text-foreground mb-1.5 block">Subject</label>
-                  <input type="text" className="w-full px-4 py-3 rounded-xl border border-border bg-card font-body text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30" placeholder="What's this about?" />
+                  <input type="text" value={formData.subject} onChange={(e) => setFormData((current) => ({ ...current, subject: e.target.value }))} className="w-full px-4 py-3 rounded-xl border border-border bg-card font-body text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30" placeholder="What's this about?" required />
                 </div>
                 <div>
                   <label className="font-body text-sm font-medium text-foreground mb-1.5 block">Message</label>
-                  <textarea rows={5} className="w-full px-4 py-3 rounded-xl border border-border bg-card font-body text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 resize-none" placeholder="Tell us more..." />
+                  <textarea rows={5} value={formData.message} onChange={(e) => setFormData((current) => ({ ...current, message: e.target.value }))} className="w-full px-4 py-3 rounded-xl border border-border bg-card font-body text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 resize-none" placeholder="Tell us more..." required />
                 </div>
-                <button type="submit" className="bg-gradient-ocean px-8 py-3.5 rounded-full font-body font-semibold text-primary-foreground hover:opacity-90 transition-opacity">
-                  Send Message
+                <button type="submit" disabled={isSubmitting} className="bg-gradient-ocean px-8 py-3.5 rounded-full font-body font-semibold text-primary-foreground hover:opacity-90 transition-opacity disabled:opacity-70 disabled:cursor-not-allowed">
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </button>
               </form>
             </div>
