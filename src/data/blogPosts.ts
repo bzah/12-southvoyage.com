@@ -29,7 +29,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: "best-hotels-south-beach-miami",
-    title: "Best Hotels in South Beach Miami 2026",
+    title: "Best Hotels in South Beach Miami",
     excerpt: "From luxury oceanfront resorts to charming Art Deco boutique hotels, discover the top-rated places to stay in South Beach Miami for every budget.",
     image: blogSouthBeach,
     date: "April 2, 2026",
@@ -47,7 +47,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "miami-beach-oceanfront-hotels-guide",
-    title: "Miami Beach Oceanfront Hotels: Complete Booking Guide",
+    title: "Miami Beach Oceanfront Hotels Guide",
     excerpt: "Everything you need to know about booking an oceanfront hotel in Miami Beach — best streets, room types, price seasons, and insider tips for ocean-view rooms.",
     image: blogMiamiOceanfront,
     date: "April 4, 2026",
@@ -65,7 +65,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "best-restaurants-new-orleans-french-quarter",
-    title: "12 Best Restaurants in the New Orleans French Quarter",
+    title: "Best Restaurants in the New Orleans French Quarter",
     excerpt: "A curated guide to the finest dining in the French Quarter — from legendary Creole institutions to hidden neighborhood gems serving unforgettable Cajun cuisine.",
     image: blogNolaRestaurants,
     date: "April 3, 2026",
@@ -117,7 +117,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "top-food-tours-new-orleans",
-    title: "Top 10 Food Tours in New Orleans You Can't Miss",
+    title: "Best Food Tours in New Orleans",
     excerpt: "From the French Quarter to the Garden District, explore the best food tours that showcase New Orleans' legendary Cajun and Creole cuisine.",
     image: blogNewOrleans,
     date: "March 20, 2026",
@@ -134,7 +134,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "best-things-to-do-key-west",
-    title: "15 Best Things to Do in Key West, Florida",
+    title: "Best Things to Do in Key West",
     excerpt: "Snorkeling coral reefs, sunset sailing, Hemingway's home, and the famous Duval Street — the ultimate Key West activity guide for 2026.",
     image: blogKeyWest,
     date: "March 15, 2026",
@@ -151,7 +151,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "perfect-weekend-savannah-georgia",
-    title: "The Perfect Weekend in Savannah, Georgia",
+    title: "Perfect Weekend in Savannah",
     excerpt: "How to spend 2–3 days in Savannah — a day-by-day itinerary covering trolley tours, historic squares, Southern cuisine, ghost walks, and Tybee Island.",
     image: blogSavannahWeekend,
     date: "March 10, 2026",
