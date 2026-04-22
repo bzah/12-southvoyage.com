@@ -412,9 +412,34 @@ const BlogPost = () => {
     headline: post.title,
     description: post.metaDescription,
     datePublished: post.date,
+    dateModified: post.date,
     author: { "@type": "Organization", name: "SouthVoyage" },
-    publisher: { "@type": "Organization", name: "SouthVoyage", url: "https://southvoyage.com" },
+    publisher: {
+      "@type": "Organization",
+      name: "SouthVoyage",
+      url: "https://southvoyage.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://southvoyage.com/favicon.png",
+      },
+    },
+    image: post.image,
+    articleSection: post.category,
+    keywords: post.keywords,
+    inLanguage: "en",
     mainEntityOfPage: `https://southvoyage.com/blog/${post.slug}`,
+  };
+
+  const speakableJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: post.title,
+    url: `https://southvoyage.com/blog/${post.slug}`,
+    description: post.metaDescription,
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", ".prose-custom p"],
+    },
   };
 
   const faqJsonLd = post.faqs.length > 0 ? {
@@ -449,6 +474,7 @@ const BlogPost = () => {
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://southvoyage.com/blog/${post.slug}`} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(speakableJsonLd)}</script>
         {faqJsonLd && <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>}
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
