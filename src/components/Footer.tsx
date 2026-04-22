@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import brandMark from "@/assets/southvoyage-icon.png";
 import { useI18n } from "@/lib/i18n";
+import InternalLinksWidget from "@/components/InternalLinksWidget";
 
 const PARTNER = "partner_id=0IQTGX8&utm_medium=online_publisher";
 const GYG = "https://www.getyourguide.com";
@@ -20,6 +21,7 @@ const Footer = () => {
   return (
     <footer className="bg-foreground py-14 md:py-16">
       <div className="container mx-auto px-4">
+        <InternalLinksWidget />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-10 mb-12">
           <div className="md:col-span-2 lg:col-span-1">
             <Link to="/" className="inline-flex items-center gap-3 min-w-0">
