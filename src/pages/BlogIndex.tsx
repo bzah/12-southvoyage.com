@@ -14,6 +14,20 @@ const breadcrumbJsonLd = {
   ],
 };
 
+const blogIndexJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "SouthVoyage Blog",
+  url: "https://southvoyage.com/blog",
+  description:
+    "Southern USA travel blog with South Beach hotel guides, Key West tips, New Orleans food, Savannah itineraries, and South Padre advice.",
+  mainEntity: {
+    "@type": "Blog",
+    name: "SouthVoyage Blog",
+    url: "https://southvoyage.com/blog",
+  },
+};
+
 const BlogIndex = () => {
   return (
     <>
@@ -25,6 +39,7 @@ const BlogIndex = () => {
         />
         <meta name="keywords" content="southern usa travel blog, south beach miami travel tips, key west travel guide, new orleans food tours, savannah weekend itinerary, south padre island hotel guide, southern usa hotel reviews, best things to do in key west, travel tips american south" />
         <link rel="canonical" href="https://southvoyage.com/blog" />
+        <script type="application/ld+json">{JSON.stringify(blogIndexJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
 

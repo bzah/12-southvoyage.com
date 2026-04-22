@@ -11,6 +11,15 @@ const breadcrumbJsonLd = {
   ],
 };
 
+const webPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Privacy Policy — SouthVoyage",
+  url: "https://southvoyage.com/privacy",
+  description:
+    "SouthVoyage Privacy Policy covering personal data, analytics, cookies, and contact form information for our travel website.",
+};
+
 const PrivacyPolicyPage = () => {
   return (
     <>
@@ -19,6 +28,7 @@ const PrivacyPolicyPage = () => {
         <meta name="description" content="SouthVoyage Privacy Policy covering personal data, analytics, cookies, and contact form information for our travel website." />
         <meta name="keywords" content="southvoyage privacy policy, travel website privacy policy, cookie and analytics policy, personal data protection travel site, southern usa travel website privacy" />
         <link rel="canonical" href="https://southvoyage.com/privacy" />
+        <script type="application/ld+json">{JSON.stringify(webPageJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
 
