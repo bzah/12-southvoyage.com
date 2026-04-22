@@ -15,7 +15,7 @@ const breadcrumbJsonLd = {
 const webPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Legal Notice — SouthVoyage",
+  name: "Legal Notice | SouthVoyage",
   url: "https://southvoyage.com/legal",
   description:
     "SouthVoyage Legal Notice and Impressum with operator details, affiliate disclosure, copyright, and liability information.",
@@ -25,7 +25,7 @@ const LegalNoticePage = () => {
   return (
     <>
       <Helmet>
-        <title>Legal Notice (Impressum) — SouthVoyage</title>
+        <title>Legal Notice | SouthVoyage</title>
         <meta name="description" content="SouthVoyage Legal Notice and Impressum with operator details, affiliate disclosure, copyright, and liability information." />
         <meta name="keywords" content="southvoyage legal notice, impressum southvoyage, affiliate disclosure travel website, liability disclaimer, website operator information" />
         <link rel="canonical" href="https://southvoyage.com/legal" />

@@ -17,7 +17,7 @@ const breadcrumbJsonLd = {
 const blogIndexJsonLd = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  name: "SouthVoyage Blog",
+  name: "Southern USA Travel Blog | SouthVoyage",
   url: "https://southvoyage.com/blog",
   description:
     "Southern USA travel blog with South Beach hotel guides, Key West tips, New Orleans food, Savannah itineraries, and South Padre advice.",
@@ -32,7 +32,7 @@ const BlogIndex = () => {
   return (
     <>
       <Helmet>
-        <title>Travel Blog — Southern USA Guides, Hotels & Tips | SouthVoyage</title>
+        <title>Southern USA Travel Blog | SouthVoyage</title>
         <meta
           name="description"
           content="Southern USA travel blog with South Beach hotel guides, Key West tips, New Orleans food, Savannah itineraries, and South Padre advice."
