@@ -31,12 +31,12 @@ const BlogIndex = () => {
       <Navbar />
       <main className="pt-16">
         {/* Blog Hero */}
-        <section className="bg-sand py-20">
+        <section className="bg-sand py-16 md:py-20">
           <div className="container mx-auto px-4 text-center">
             <p className="font-body text-sm uppercase tracking-[0.2em] text-primary mb-3">
               SouthVoyage Blog
             </p>
-            <h1 className="font-display text-4xl md:text-6xl font-bold text-foreground mb-4">
+            <h1 className="font-display text-3xl sm:text-4xl md:text-6xl font-bold text-foreground mb-4">
               Travel Guides & Tips
             </h1>
             <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -47,12 +47,12 @@ const BlogIndex = () => {
         </section>
 
         {/* Blog Grid */}
-        <section className="py-20 bg-background">
+        <section className="py-16 md:py-20 bg-background">
           <div className="container mx-auto px-4">
             {/* Featured post */}
             <Link
               to={`/blog/${blogPosts[0].slug}`}
-              className="group block mb-12 bg-card rounded-2xl border border-border overflow-hidden hover:shadow-elevated transition-all duration-300"
+              className="group block mb-10 md:mb-12 bg-card rounded-2xl border border-border overflow-hidden hover:shadow-elevated transition-all duration-300"
             >
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div className="aspect-[16/10] lg:aspect-auto overflow-hidden">
@@ -65,7 +65,7 @@ const BlogIndex = () => {
                     height={600}
                   />
                 </div>
-                <div className="p-8 lg:p-12 flex flex-col justify-center">
+                <div className="p-5 sm:p-6 lg:p-12 flex flex-col justify-center">
                   <span className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-body font-semibold mb-4 w-fit">
                     {blogPosts[0].category} — Featured
                   </span>
@@ -73,7 +73,7 @@ const BlogIndex = () => {
                     {blogPosts[0].title}
                   </h2>
                   <p className="font-body text-muted-foreground mb-6">{blogPosts[0].excerpt}</p>
-                  <div className="flex items-center gap-4 text-sm font-body text-muted-foreground">
+                  <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-2 sm:gap-4 text-sm font-body text-muted-foreground">
                     <span className="flex items-center gap-1">
                       <Calendar className="w-4 h-4" /> {blogPosts[0].date}
                     </span>
@@ -107,11 +107,11 @@ const BlogIndex = () => {
                     <span className="inline-block bg-primary/10 text-primary px-2.5 py-0.5 rounded-full text-xs font-body font-semibold mb-3">
                       {post.category}
                     </span>
-                    <h3 className="font-display text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    <h3 className="font-display text-lg sm:text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors leading-snug">
                       {post.title}
                     </h3>
                     <p className="font-body text-sm text-muted-foreground mb-4">{post.excerpt}</p>
-                    <div className="flex items-center gap-3 text-xs font-body text-muted-foreground">
+                    <div className="flex flex-wrap items-center gap-3 text-xs font-body text-muted-foreground">
                       <span className="flex items-center gap-1">
                         <Calendar className="w-3 h-3" /> {post.date}
                       </span>

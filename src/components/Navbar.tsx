@@ -22,10 +22,10 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
-      <div className="container mx-auto flex items-center justify-between h-16 px-4 gap-4">
-        <Link to="/" className="flex items-center gap-3 shrink-0">
-          <img src={brandMark} alt="SouthVoyage logo" className="h-10 w-10 object-contain" width={1024} height={1024} />
-          <span className="text-2xl font-display font-bold text-foreground">
+      <div className="container mx-auto flex items-center justify-between h-16 px-3 sm:px-4 gap-3 sm:gap-4">
+        <Link to="/" className="flex items-center gap-2 sm:gap-3 shrink min-w-0">
+          <img src={brandMark} alt="SouthVoyage logo" className="h-8 w-8 sm:h-10 sm:w-10 object-contain shrink-0" width={1024} height={1024} />
+          <span className="text-[1.85rem] sm:text-2xl font-display font-bold text-foreground leading-none truncate">
             South<span className="text-primary">Voyage</span>
           </span>
         </Link>
@@ -81,7 +81,7 @@ const Navbar = () => {
 
       {isOpen && (
         <div className="md:hidden bg-background border-b border-border px-4 pb-4 animate-fade-in">
-          <div className="flex items-center gap-1 rounded-full border border-border bg-card p-1 my-3 w-fit">
+          <div className="flex flex-wrap items-center gap-1 rounded-[1.25rem] border border-border bg-card p-1 my-3 w-full max-w-full">
             {languages.map((code) => {
               const active = language === code;
               return (
@@ -89,7 +89,7 @@ const Navbar = () => {
                   key={code}
                   type="button"
                   onClick={() => setLanguage(code as Language)}
-                  className={`min-w-10 rounded-full px-3 py-1.5 text-xs font-body font-semibold transition-colors ${
+                  className={`min-w-10 flex-1 rounded-full px-3 py-1.5 text-xs font-body font-semibold transition-colors ${
                     active ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"
                   }`}
                   aria-pressed={active}

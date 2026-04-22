@@ -42,13 +42,13 @@ const ToursSection = () => {
   const section = content.home.tours;
 
   return (
-    <section id="tours" className="py-24 bg-background">
+    <section id="tours" className="py-20 md:py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <p className="font-body text-sm uppercase tracking-[0.2em] text-secondary mb-3">
             {section.eyebrow}
           </p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
             {section.title}
           </h2>
           <p className="font-body text-muted-foreground max-w-xl mx-auto">{section.description}</p>
@@ -71,11 +71,11 @@ const ToursSection = () => {
                   <span className="font-body text-xs text-muted-foreground">({tour.reviews.toLocaleString()} {section.reviewsLabel})</span>
                 </div>
 
-                <h3 className="font-display text-lg font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                <h3 className="font-display text-lg font-semibold text-foreground mb-3 group-hover:text-primary transition-colors leading-snug">
                   {item.title}
                 </h3>
 
-                <div className="flex items-center gap-4 mb-4">
+                <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-2 sm:gap-4 mb-4">
                   <span className="flex items-center gap-1 text-muted-foreground text-sm font-body">
                     <MapPin className="w-3.5 h-3.5" /> {item.location}
                   </span>
@@ -84,9 +84,9 @@ const ToursSection = () => {
                   </span>
                 </div>
 
-                <div className="flex items-center justify-between pt-4 border-t border-border gap-4">
+                <div className="flex items-center justify-between pt-4 border-t border-border gap-4 flex-wrap">
                   <span className="font-body text-lg font-bold text-secondary">{item.price}</span>
-                  <span className="font-body text-sm font-semibold text-primary group-hover:underline">
+                  <span className="font-body text-sm font-semibold text-primary group-hover:underline shrink-0">
                     {section.viewDetails} →
                   </span>
                 </div>
@@ -100,7 +100,7 @@ const ToursSection = () => {
             href={`${GYG}/s/?q=southern+usa&${PARTNER}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-gradient-ocean px-8 py-4 rounded-full font-body font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
+            className="inline-block w-full sm:w-auto bg-gradient-ocean px-8 py-4 rounded-full font-body font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
           >
             {section.browseAll}
           </a>

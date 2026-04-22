@@ -66,7 +66,7 @@ const DestinationPage = () => {
       <Navbar />
       <main className="pt-16">
         {/* Hero */}
-        <section className="relative h-[60vh] min-h-[400px] flex items-end overflow-hidden">
+        <section className="relative h-[58vh] min-h-[340px] sm:min-h-[400px] flex items-end overflow-hidden">
           <img
             src={dest.heroImage}
             alt={`${dest.name} travel destination`}
@@ -75,17 +75,17 @@ const DestinationPage = () => {
             height={600}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/30 to-foreground/10" />
-          <div className="relative z-10 container mx-auto px-4 pb-12">
+          <div className="relative z-10 container mx-auto px-4 pb-8 sm:pb-12">
             <Link to="/#destinations" className="inline-flex items-center gap-1 text-sand/70 font-body text-sm hover:text-sand transition-colors mb-4">
               <ArrowLeft className="w-4 h-4" /> All Destinations
             </Link>
             <p className="font-body text-sm uppercase tracking-[0.2em] text-primary mb-2">{dest.tagline}</p>
-            <h1 className="font-display text-4xl md:text-6xl font-bold text-sand mb-3">{dest.name}</h1>
+            <h1 className="font-display text-3xl sm:text-4xl md:text-6xl font-bold text-sand mb-3 leading-tight max-w-3xl">{dest.name}</h1>
           </div>
         </section>
 
         {/* Intro + Content */}
-        <section className="py-16 bg-background">
+        <section className="py-14 md:py-16 bg-background">
           <div className="container mx-auto px-4 max-w-4xl">
             <p className="font-body text-lg leading-relaxed text-muted-foreground mb-12">
               {dest.introText}
@@ -107,13 +107,13 @@ const DestinationPage = () => {
         </section>
 
         {/* Tours */}
-        <section className="py-16 bg-sand">
+        <section className="py-14 md:py-16 bg-sand">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <p className="font-body text-sm uppercase tracking-[0.2em] text-secondary mb-3">
                 Book Experiences
               </p>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
+                <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3">
                 Top Tours & Activities in {dest.name.split(",")[0]}
               </h2>
             </div>
@@ -135,12 +135,12 @@ const DestinationPage = () => {
                   <h3 className="font-display text-lg font-semibold text-foreground mb-3 group-hover:text-primary transition-colors leading-snug">
                     {tour.title}
                   </h3>
-                  <div className="flex items-center gap-4 mb-4 text-muted-foreground text-sm font-body">
+                  <div className="flex flex-wrap items-center gap-3 mb-4 text-muted-foreground text-sm font-body">
                     <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5" /> {tour.duration}</span>
                   </div>
-                  <div className="flex items-center justify-between pt-4 border-t border-border">
+                  <div className="flex items-center justify-between flex-wrap gap-3 pt-4 border-t border-border">
                     <span className="font-body text-lg font-bold text-secondary">{tour.price}</span>
-                    <span className="font-body text-sm font-semibold text-primary group-hover:underline">Book Now →</span>
+                    <span className="font-body text-sm font-semibold text-primary group-hover:underline shrink-0">Book Now →</span>
                   </div>
                 </a>
               ))}
@@ -151,7 +151,7 @@ const DestinationPage = () => {
                 href={dest.gygSearchLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-gradient-ocean px-8 py-4 rounded-full font-body font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
+                className="inline-block w-full sm:w-auto bg-gradient-ocean px-8 py-4 rounded-full font-body font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
               >
                 Browse All {dest.name.split(",")[0]} Tours
               </a>
@@ -160,13 +160,13 @@ const DestinationPage = () => {
         </section>
 
         {/* Hotels */}
-        <section className="py-16 bg-background">
+        <section className="py-14 md:py-16 bg-background">
           <div className="container mx-auto px-4 max-w-4xl">
             <div className="text-center mb-12">
               <p className="font-body text-sm uppercase tracking-[0.2em] text-coral mb-3">
                 Where to Stay
               </p>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
+                <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3">
                 Best Hotel Areas in {dest.name.split(",")[0]}
               </h2>
             </div>
@@ -177,9 +177,9 @@ const DestinationPage = () => {
                   key={area.name}
                   className="bg-card rounded-2xl border border-border p-6"
                 >
-                  <div className="flex items-start justify-between mb-2">
+                  <div className="flex flex-col sm:flex-row items-start justify-between mb-2 gap-2">
                     <h3 className="font-display text-lg font-bold text-foreground">{area.name}</h3>
-                    <span className="font-body text-sm font-semibold text-secondary whitespace-nowrap ml-4">
+                    <span className="font-body text-sm font-semibold text-secondary whitespace-nowrap sm:ml-4">
                       {area.priceRange}
                     </span>
                   </div>
@@ -191,7 +191,7 @@ const DestinationPage = () => {
         </section>
 
         {/* FAQ */}
-        <section className="py-16 bg-sand">
+        <section className="py-14 md:py-16 bg-sand">
           <div className="container mx-auto px-4 max-w-3xl">
             <div className="text-center mb-12">
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
@@ -230,7 +230,7 @@ const DestinationPage = () => {
                 <p className="font-body text-sm uppercase tracking-[0.2em] text-primary mb-3">
                   Travel Guides & Tips
                 </p>
-                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
+                <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3">
                   Read More About {dest.name.split(",")[0]}
                 </h2>
               </div>
@@ -271,7 +271,7 @@ const DestinationPage = () => {
         )}
 
 
-        <section className="py-16 bg-background">
+        <section className="py-14 md:py-16 bg-background">
           <div className="container mx-auto px-4">
             <h2 className="font-display text-2xl font-bold text-foreground mb-8 text-center">
               Explore More Destinations
