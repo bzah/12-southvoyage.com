@@ -74,7 +74,15 @@ const Index = () => {
         <meta property="og:description" content={home.ogDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:image" content="https://southvoyage.com/social/home-og.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="SouthVoyage social share image featuring Southern USA travel destinations" />
         <meta property="og:locale" content={ogLocaleByLanguage[language]} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={home.ogTitle} />
+        <meta name="twitter:description" content={home.ogDescription} />
+        <meta name="twitter:image" content="https://southvoyage.com/social/home-og.png" />
         <script type="application/ld+json">{JSON.stringify(travelAgencyJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(websiteJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(organizationJsonLd)}</script>
