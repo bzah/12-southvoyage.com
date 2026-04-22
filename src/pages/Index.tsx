@@ -18,7 +18,7 @@ const Index = () => {
   const { content } = useI18n();
   const home = content.home;
 
-  const jsonLd = {
+  const travelAgencyJsonLd = {
     "@context": "https://schema.org",
     "@type": "TravelAgency",
     name: "SouthVoyage",
@@ -29,6 +29,30 @@ const Index = () => {
       name: "Southern United States",
     },
     sameAs: [],
+  };
+
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "SouthVoyage",
+    url: "https://southvoyage.com/",
+    description: home.metaDescription,
+    inLanguage: ["en", "es", "fr", "ru"],
+    publisher: {
+      "@type": "Organization",
+      name: "SouthVoyage",
+      url: "https://southvoyage.com",
+    },
+  };
+
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "SouthVoyage",
+    url: "https://southvoyage.com",
+    logo: "https://southvoyage.com/favicon.png",
+    description: home.metaDescription,
+    areaServed: ["Florida", "Louisiana", "Georgia", "Texas"],
   };
 
   return (
@@ -42,7 +66,9 @@ const Index = () => {
         <meta property="og:description" content={home.ogDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://southvoyage.com/" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(travelAgencyJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(websiteJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(organizationJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
 

@@ -40,6 +40,22 @@ const AboutPage = () => {
     description: about.metaDescription,
   };
 
+  const aboutPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: about.metaTitle,
+    url: "https://southvoyage.com/about",
+    description: about.metaDescription,
+    inLanguage: ["en", "es", "fr", "ru"],
+    mainEntity: {
+      "@type": "Organization",
+      name: "SouthVoyage",
+      url: "https://southvoyage.com",
+      description: about.metaDescription,
+      areaServed: ["Florida", "Louisiana", "Georgia", "Texas"],
+    },
+  };
+
   return (
     <>
       <Helmet>
@@ -52,6 +68,7 @@ const AboutPage = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://southvoyage.com/about" />
         <script type="application/ld+json">{JSON.stringify(businessJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(aboutPageJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
 

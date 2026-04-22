@@ -31,6 +31,25 @@ const ContactPage = () => {
   const { content } = useI18n();
   const contact = content.contact;
 
+  const contactPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: contact.metaTitle,
+    url: "https://southvoyage.com/contact",
+    description: contact.metaDescription,
+    mainEntity: {
+      "@type": "Organization",
+      name: "SouthVoyage",
+      url: "https://southvoyage.com",
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        email: "contact@southvoyage.com",
+        availableLanguage: ["English", "Spanish", "French", "Russian"],
+      },
+    },
+  };
+
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
@@ -67,6 +86,7 @@ const ContactPage = () => {
         <meta name="description" content={contact.metaDescription} />
         <meta name="keywords" content={contact.metaKeywords} />
         <link rel="canonical" href="https://southvoyage.com/contact" />
+        <script type="application/ld+json">{JSON.stringify(contactPageJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
 
