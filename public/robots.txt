@@ -14,3 +14,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://southvoyage.com/sitemap_index.xml
+Sitemap: https://southvoyage.com/destination-topic-sitemap.xml
