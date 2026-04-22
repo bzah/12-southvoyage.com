@@ -15,13 +15,13 @@ const HotelsSection = () => {
   const section = content.home.hotels;
 
   return (
-    <section id="hotels" className="py-24 bg-sand">
+    <section id="hotels" className="py-20 md:py-24 bg-sand">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <p className="font-body text-sm uppercase tracking-[0.2em] text-coral mb-3">
             {section.eyebrow}
           </p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
             {section.title}
           </h2>
           <p className="font-body text-muted-foreground max-w-xl mx-auto">{section.description}</p>
@@ -36,9 +36,9 @@ const HotelsSection = () => {
                 href={hotel.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-card rounded-2xl border border-border p-8 hover:shadow-elevated transition-all duration-300"
+                className="group bg-card rounded-2xl border border-border p-6 sm:p-8 hover:shadow-elevated transition-all duration-300"
               >
-                <div className="flex items-start justify-between mb-4 gap-4">
+                <div className="flex flex-col sm:flex-row items-start justify-between mb-4 gap-3 sm:gap-4">
                   <div>
                     <h3 className="font-display text-xl font-bold text-foreground group-hover:text-primary transition-colors mb-1">
                       {item.name}
@@ -58,7 +58,7 @@ const HotelsSection = () => {
                       {amenity}
                     </span>
                   ))}
-                  <span className="ml-auto font-body text-sm font-semibold text-primary group-hover:underline">
+                  <span className="sm:ml-auto w-full sm:w-auto pt-1 sm:pt-0 font-body text-sm font-semibold text-primary group-hover:underline">
                     {section.checkAvailability} →
                   </span>
                 </div>
