@@ -1,18 +1,22 @@
 import { Link } from "react-router-dom";
 import brandMark from "@/assets/southvoyage-icon.png";
+import { useI18n } from "@/lib/i18n";
 
 const PARTNER = "partner_id=0IQTGX8&utm_medium=online_publisher";
 const GYG = "https://www.getyourguide.com";
 
 const destLinks = [
-  { label: "South Beach Miami", slug: "south-beach-miami" },
-  { label: "Key West", slug: "key-west" },
-  { label: "New Orleans", slug: "new-orleans" },
-  { label: "South Padre Island", slug: "south-padre-island" },
-  { label: "Savannah", slug: "savannah" },
-];
+  { slug: "south-beach-miami" },
+  { slug: "key-west" },
+  { slug: "new-orleans" },
+  { slug: "south-padre-island" },
+  { slug: "savannah" },
+] as const;
 
 const Footer = () => {
+  const { content } = useI18n();
+  const footer = content.footer;
+
   return (
     <footer className="bg-foreground py-16">
       <div className="container mx-auto px-4">
@@ -24,52 +28,50 @@ const Footer = () => {
                 South<span className="text-primary">Voyage</span>
               </span>
             </Link>
-            <p className="font-body text-sand/60 text-sm mt-3">
-              Your ultimate guide to exploring the best destinations, tours, and hotels across the Southern United States.
-            </p>
+            <p className="font-body text-sand/60 text-sm mt-3">{footer.tagline}</p>
           </div>
 
           <div>
-            <h4 className="font-display text-sm font-semibold text-sand mb-4 uppercase tracking-wider">Destinations</h4>
+            <h4 className="font-display text-sm font-semibold text-sand mb-4 uppercase tracking-wider">{footer.destinations}</h4>
             <ul className="space-y-2">
-              {destLinks.map((d) => (
+              {destLinks.map((d, index) => (
                 <li key={d.slug}>
-                  <Link to={`/destinations/${d.slug}`} className="font-body text-sm text-sand/60 hover:text-primary transition-colors">{d.label}</Link>
+                  <Link to={`/destinations/${d.slug}`} className="font-body text-sm text-sand/60 hover:text-primary transition-colors">{footer.destinationsList[index]}</Link>
                 </li>
               ))}
             </ul>
           </div>
 
           <div>
-            <h4 className="font-display text-sm font-semibold text-sand mb-4 uppercase tracking-wider">Resources</h4>
+            <h4 className="font-display text-sm font-semibold text-sand mb-4 uppercase tracking-wider">{footer.resources}</h4>
             <ul className="space-y-2">
-              <li><Link to="/blog" className="font-body text-sm text-sand/60 hover:text-primary transition-colors">Travel Blog</Link></li>
-              <li><Link to="/about" className="font-body text-sm text-sand/60 hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link to="/contact" className="font-body text-sm text-sand/60 hover:text-primary transition-colors">Contact</Link></li>
-              <li><Link to="/blog/best-hotels-south-beach-miami" className="font-body text-sm text-sand/60 hover:text-primary transition-colors">Best Hotels South Beach</Link></li>
-              <li><Link to="/blog/top-food-tours-new-orleans" className="font-body text-sm text-sand/60 hover:text-primary transition-colors">New Orleans Food Tours</Link></li>
+              <li><Link to="/blog" className="font-body text-sm text-sand/60 hover:text-primary transition-colors">{footer.travelBlog}</Link></li>
+              <li><Link to="/about" className="font-body text-sm text-sand/60 hover:text-primary transition-colors">{footer.aboutUs}</Link></li>
+              <li><Link to="/contact" className="font-body text-sm text-sand/60 hover:text-primary transition-colors">{footer.contact}</Link></li>
+              <li><Link to="/blog/best-hotels-south-beach-miami" className="font-body text-sm text-sand/60 hover:text-primary transition-colors">{footer.bestHotels}</Link></li>
+              <li><Link to="/blog/top-food-tours-new-orleans" className="font-body text-sm text-sand/60 hover:text-primary transition-colors">{footer.foodTours}</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-display text-sm font-semibold text-sand mb-4 uppercase tracking-wider">Legal</h4>
+            <h4 className="font-display text-sm font-semibold text-sand mb-4 uppercase tracking-wider">{footer.legal}</h4>
             <ul className="space-y-2">
-              <li><Link to="/privacy" className="font-body text-sm text-sand/60 hover:text-primary transition-colors">Privacy Policy</Link></li>
-              <li><Link to="/terms" className="font-body text-sm text-sand/60 hover:text-primary transition-colors">Terms of Service</Link></li>
-              <li><Link to="/cookies" className="font-body text-sm text-sand/60 hover:text-primary transition-colors">Cookie Policy</Link></li>
-              <li><Link to="/dmca" className="font-body text-sm text-sand/60 hover:text-primary transition-colors">DMCA</Link></li>
-              <li><Link to="/legal" className="font-body text-sm text-sand/60 hover:text-primary transition-colors">Legal Notice</Link></li>
-              <li><Link to="/parents-info" className="font-body text-sm text-sand/60 hover:text-primary transition-colors">Parents Info</Link></li>
+              <li><Link to="/privacy" className="font-body text-sm text-sand/60 hover:text-primary transition-colors">{footer.privacy}</Link></li>
+              <li><Link to="/terms" className="font-body text-sm text-sand/60 hover:text-primary transition-colors">{footer.terms}</Link></li>
+              <li><Link to="/cookies" className="font-body text-sm text-sand/60 hover:text-primary transition-colors">{footer.cookies}</Link></li>
+              <li><Link to="/dmca" className="font-body text-sm text-sand/60 hover:text-primary transition-colors">{footer.dmca}</Link></li>
+              <li><Link to="/legal" className="font-body text-sm text-sand/60 hover:text-primary transition-colors">{footer.legalNotice}</Link></li>
+              <li><Link to="/parents-info" className="font-body text-sm text-sand/60 hover:text-primary transition-colors">{footer.parentsInfo}</Link></li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-sand/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="font-body text-xs text-sand/40">
-            © {new Date().getFullYear()} SouthVoyage.com — All rights reserved.
+            © {new Date().getFullYear()} SouthVoyage.com — {footer.rights}
           </p>
           <p className="font-body text-xs text-sand/40">
-            Tours & activities powered by{" "}
+            {footer.poweredBy}{" "}
             <a
               href={`${GYG}/?${PARTNER}`}
               target="_blank"
