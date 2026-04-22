@@ -10,6 +10,12 @@ const hotels = [
   { link: `${GYG}/south-padre-island-l4439/?q=hotels&${PARTNER}` },
 ] as const;
 
+const bookingNotes = [
+  "Oceanfront and historic-core hotels usually carry the highest conversion because travelers want to stay close to the main attractions.",
+  "Shoulder-season dates often produce the best mix of lower nightly rates and strong weather across South Beach, Key West, and Savannah.",
+  "Use the destination guides to compare hotel areas before clicking through so readers land on booking pages with stronger intent.",
+] as const;
+
 const HotelsSection = () => {
   const { content } = useI18n();
   const section = content.home.hotels;
@@ -65,6 +71,38 @@ const HotelsSection = () => {
               </a>
             );
           })}
+        </div>
+
+        <div className="mt-12 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-6">
+          <div className="rounded-2xl border border-border bg-card p-6 sm:p-8">
+            <p className="font-body text-sm uppercase tracking-[0.2em] text-coral mb-3">Booking advice</p>
+            <h3 className="font-display text-2xl font-bold text-foreground mb-4">How readers pick better stays</h3>
+            <ul className="space-y-3">
+              {bookingNotes.map((note) => (
+                <li key={note} className="font-body text-sm leading-relaxed text-muted-foreground border-b border-border pb-3 last:border-b-0 last:pb-0">
+                  {note}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="rounded-2xl border border-border bg-card p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <p className="font-body text-sm uppercase tracking-[0.2em] text-primary mb-3">Stay search</p>
+              <h3 className="font-display text-2xl font-bold text-foreground mb-3">Browse more hotel options</h3>
+              <p className="font-body text-sm leading-relaxed text-muted-foreground mb-5">
+                Visitors comparing family resorts, boutique hotels, and beachfront stays can jump directly to more availability options from here.
+              </p>
+            </div>
+            <a
+              href={`${GYG}/s/?q=southern+usa+hotels&${PARTNER}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block w-full bg-gradient-ocean px-6 py-4 rounded-full text-center font-body font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
+            >
+              Search Southern Hotel Deals
+            </a>
+          </div>
         </div>
       </div>
     </section>
