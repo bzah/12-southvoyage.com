@@ -406,6 +406,13 @@ const BlogPost = () => {
     return <NotFound />;
   }
 
+  const relatedDestination = post.relatedDestinationSlug ? getDestinationBySlug(post.relatedDestinationSlug) : undefined;
+  const bookingAngles = [
+    "Readers convert better when they see specific neighborhood, timing, or activity guidance before the booking button.",
+    "Pair one high-intent affiliate CTA for tours with one for hotels so each article serves both experience and stay planning.",
+    "Use destination guides as the next click for readers who still need context before they book.",
+  ];
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -524,7 +531,46 @@ const BlogPost = () => {
               </span>
             </div>
 
+            <div className="mb-8 grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-5">
+              <div className="rounded-2xl border border-border bg-sand p-5 sm:p-6">
+                <p className="font-body text-sm uppercase tracking-[0.2em] text-secondary mb-3">Plan before you book</p>
+                <h2 className="font-display text-2xl font-bold text-foreground mb-3">Why this guide goes deeper</h2>
+                <p className="font-body text-sm leading-relaxed text-muted-foreground">
+                  This article is written to do more than inspire. It helps readers compare neighborhoods, timing, price bands, and activity types so the next affiliate click is more informed and more likely to convert.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-border bg-card p-5 sm:p-6 flex flex-col justify-between">
+                <div>
+                  <p className="font-body text-sm uppercase tracking-[0.2em] text-primary mb-3">Quick booking path</p>
+                  <h2 className="font-display text-2xl font-bold text-foreground mb-3">Browse related activities now</h2>
+                  <p className="font-body text-sm leading-relaxed text-muted-foreground mb-5">
+                    Open the latest availability and best-selling options related to this guide topic.
+                  </p>
+                </div>
+                <a
+                  href={relatedDestination?.gygSearchLink ?? `${GYG}/s/?q=southern+usa+travel&${PARTNER}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block w-full bg-gradient-ocean px-6 py-4 rounded-full text-center font-body font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
+                >
+                  Browse Related Offers
+                </a>
+              </div>
+            </div>
+
             {articleContent[slug]}
+
+            <div className="mt-8 rounded-2xl border border-border bg-background p-5 sm:p-6">
+              <p className="font-body text-sm uppercase tracking-[0.2em] text-coral mb-3">Affiliate strategy</p>
+              <h2 className="font-display text-2xl font-bold text-foreground mb-4">What usually matters before checkout</h2>
+              <div className="space-y-3">
+                {bookingAngles.map((angle) => (
+                  <p key={angle} className="font-body text-sm leading-relaxed text-muted-foreground border-b border-border pb-3 last:border-b-0 last:pb-0">
+                    {angle}
+                  </p>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
@@ -560,38 +606,57 @@ const BlogPost = () => {
         )}
 
         {/* Destination CTA */}
-        {post.relatedDestinationSlug && (() => {
-          const dest = getDestinationBySlug(post.relatedDestinationSlug!);
-          if (!dest) return null;
+        {relatedDestination && (() => {
+          const dest = relatedDestination;
           return (
             <section className="py-12 mt-16">
               <div className="container mx-auto px-4 max-w-3xl">
-                <Link
-                  to={`/destinations/${dest.slug}`}
-                  className="group flex flex-col md:flex-row items-stretch rounded-2xl overflow-hidden border border-border shadow-card hover:shadow-elevated transition-all duration-300"
-                >
-                  <div className="md:w-2/5 aspect-[16/9] md:aspect-auto overflow-hidden">
-                    <img
-                      src={dest.heroImage}
-                      alt={`${dest.name} travel guide`}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
-                      width={400}
-                      height={300}
-                    />
-                  </div>
-                  <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-center bg-card">
-                    <div className="flex flex-wrap items-center gap-2 mb-2">
-                      <MapPin className="w-4 h-4 text-secondary" />
-                      <span className="font-body text-xs uppercase tracking-wider text-secondary font-semibold">Destination Guide</span>
+                <div className="grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-5">
+                  <Link
+                    to={`/destinations/${dest.slug}`}
+                    className="group flex flex-col md:flex-row items-stretch rounded-2xl overflow-hidden border border-border shadow-card hover:shadow-elevated transition-all duration-300"
+                  >
+                    <div className="md:w-2/5 aspect-[16/9] md:aspect-auto overflow-hidden">
+                      <img
+                        src={dest.heroImage}
+                        alt={`${dest.name} travel guide`}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                        width={400}
+                        height={300}
+                      />
                     </div>
-                    <h3 className="font-display text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors mb-2">
-                      Explore {dest.name}
-                    </h3>
-                    <p className="font-body text-sm text-muted-foreground mb-4">{dest.tagline} — Hotels, tours, activities, and everything you need to plan your trip.</p>
-                    <span className="font-body text-sm font-semibold text-primary group-hover:underline">Read the Full Guide →</span>
+                    <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-center bg-card">
+                      <div className="flex flex-wrap items-center gap-2 mb-2">
+                        <MapPin className="w-4 h-4 text-secondary" />
+                        <span className="font-body text-xs uppercase tracking-wider text-secondary font-semibold">Destination Guide</span>
+                      </div>
+                      <h3 className="font-display text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors mb-2">
+                        Explore {dest.name}
+                      </h3>
+                      <p className="font-body text-sm text-muted-foreground mb-4">{dest.tagline} — Hotels, tours, activities, and everything you need to plan your trip.</p>
+                      <span className="font-body text-sm font-semibold text-primary group-hover:underline">Read the Full Guide →</span>
+                    </div>
+                  </Link>
+
+                  <div className="rounded-2xl border border-border bg-card p-6 md:p-8 flex flex-col justify-between">
+                    <div>
+                      <p className="font-body text-sm uppercase tracking-[0.2em] text-primary mb-3">Book this destination</p>
+                      <h3 className="font-display text-2xl font-bold text-foreground mb-3">Compare stays and tours</h3>
+                      <p className="font-body text-sm leading-relaxed text-muted-foreground mb-5">
+                        Readers who finished this article can jump straight into current options for {dest.name.split(",")[0]}.
+                      </p>
+                    </div>
+                    <a
+                      href={dest.gygSearchLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block w-full bg-gradient-ocean px-6 py-4 rounded-full text-center font-body font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
+                    >
+                      Search {dest.name.split(",")[0]} Deals
+                    </a>
                   </div>
-                </Link>
+                </div>
               </div>
             </section>
           );
