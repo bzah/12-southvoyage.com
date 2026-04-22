@@ -8,13 +8,13 @@ const BlogPreviewSection = () => {
   const section = content.home.blog;
 
   return (
-    <section id="blog" className="py-24 bg-background">
+    <section id="blog" className="py-20 md:py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <p className="font-body text-sm uppercase tracking-[0.2em] text-primary mb-3">
             {section.eyebrow}
           </p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
             {section.title}
           </h2>
           <p className="font-body text-muted-foreground max-w-xl mx-auto">{section.description}</p>
@@ -63,7 +63,7 @@ const BlogPreviewSection = () => {
         <div className="text-center mt-12">
           <Link
             to="/blog"
-            className="inline-block border-2 border-primary px-8 py-4 rounded-full font-body font-semibold text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+            className="inline-block w-full sm:w-auto border-2 border-primary px-8 py-4 rounded-full font-body font-semibold text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
           >
             {section.viewAll}
           </Link>
