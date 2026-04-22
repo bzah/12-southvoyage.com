@@ -14,7 +14,7 @@ const breadcrumbJsonLd = {
 const webPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "DMCA Policy — SouthVoyage",
+  name: "DMCA Policy | SouthVoyage",
   url: "https://southvoyage.com/dmca",
   description:
     "SouthVoyage DMCA Policy for copyright complaints, takedown notices, counter-notifications, and intellectual property contacts.",
@@ -24,7 +24,7 @@ const DmcaPage = () => {
   return (
     <>
       <Helmet>
-        <title>DMCA Policy — SouthVoyage</title>
+        <title>DMCA Policy | SouthVoyage</title>
         <meta name="description" content="SouthVoyage DMCA Policy for copyright complaints, takedown notices, counter-notifications, and intellectual property contacts." />
         <meta name="keywords" content="southvoyage dmca policy, copyright infringement notice, dmca takedown request, counter notification policy, website copyright complaint" />
         <link rel="canonical" href="https://southvoyage.com/dmca" />
