@@ -1,6 +1,10 @@
-import { corsHeaders } from "https://esm.sh/@supabase/supabase-js@2.57.4/cors";
 import { z } from "https://deno.land/x/zod@v3.24.2/mod.ts";
 import nodemailer from "npm:nodemailer@6.9.16";
+
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
+};
 
 const requestSchema = z.object({
   name: z.string().trim().min(2).max(120),
