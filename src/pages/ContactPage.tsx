@@ -59,7 +59,8 @@ const ContactPage = () => {
     <>
       <Helmet>
         <title>Contact Us — SouthVoyage</title>
-        <meta name="description" content="Get in touch with the SouthVoyage team. Questions about Southern USA travel, partnership inquiries, or content corrections — we're here to help." />
+        <meta name="description" content="Contact SouthVoyage for Southern USA travel questions, hotel and tour recommendations, partnership inquiries, press requests, content updates, or destination corrections related to South Beach, Key West, New Orleans, Savannah, and more." />
+        <meta name="keywords" content="contact southvoyage, southern usa travel help, south beach travel questions, key west travel advice, new orleans travel contact, partnership inquiries southvoyage, travel guide corrections" />
         <link rel="canonical" href="https://southvoyage.com/contact" />
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>

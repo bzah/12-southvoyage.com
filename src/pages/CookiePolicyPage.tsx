@@ -16,7 +16,8 @@ const CookiePolicyPage = () => {
     <>
       <Helmet>
         <title>Cookie Policy — SouthVoyage</title>
-        <meta name="description" content="Cookie Policy for SouthVoyage.com. Learn about the cookies we use, why we use them, and how to manage your cookie preferences." />
+        <meta name="description" content="Learn how SouthVoyage uses cookies for website functionality, analytics, affiliate attribution, and performance measurement, plus how to manage cookie preferences in Chrome, Safari, Firefox, and Edge." />
+        <meta name="keywords" content="southvoyage cookie policy, travel website cookies, affiliate tracking cookies, analytics cookies policy, manage browser cookies" />
         <link rel="canonical" href="https://southvoyage.com/cookies" />
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>

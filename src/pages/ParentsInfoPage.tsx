@@ -17,7 +17,8 @@ const ParentsInfoPage = () => {
     <>
       <Helmet>
         <title>Parents Info — Online Safety for Children | SouthVoyage</title>
-        <meta name="description" content="Information for parents about how SouthVoyage.com handles children's data, online safety guidelines, and COPPA compliance." />
+        <meta name="description" content="Read SouthVoyage Parents Info for guidance on children's privacy, COPPA compliance, online safety, parental controls, third-party travel booking links, and how families can use our travel content responsibly." />
+        <meta name="keywords" content="southvoyage parents info, children's privacy policy, coppa compliance website, online safety for families, parental controls travel website" />
         <link rel="canonical" href="https://southvoyage.com/parents-info" />
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>

@@ -21,8 +21,9 @@ const BlogIndex = () => {
         <title>Travel Blog — Southern USA Guides, Hotels & Tips | SouthVoyage</title>
         <meta
           name="description"
-          content="Read expert travel guides for the American South. Hotel reviews, tour recommendations, and insider tips for South Beach, Key West, New Orleans & more."
+          content="Read detailed Southern USA travel guides with hotel reviews, food tour recommendations, seasonal tips, itineraries, and local advice for South Beach Miami, Key West, New Orleans, Savannah, and South Padre Island."
         />
+        <meta name="keywords" content="southern usa travel blog, south beach miami travel tips, key west travel guide, new orleans food tours, savannah weekend itinerary, south padre island hotel guide, southern usa hotel reviews, best things to do in key west, travel tips american south" />
         <link rel="canonical" href="https://southvoyage.com/blog" />
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
