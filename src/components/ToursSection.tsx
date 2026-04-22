@@ -37,6 +37,21 @@ const tours = [
   },
 ] as const;
 
+const quickGuides = [
+  {
+    title: "Book popular tours early",
+    description: "Top-rated food tours, snorkeling trips, and sunset cruises often sell out first on weekends and holiday periods.",
+  },
+  {
+    title: "Compare timing, not just price",
+    description: "Morning tours usually bring cooler weather, calmer water, and better photo conditions across Florida, Georgia, and Louisiana.",
+  },
+  {
+    title: "Bundle nearby experiences",
+    description: "Use destination pages to pair one headline attraction with one neighborhood tour so visitors spend more time exploring and less time planning.",
+  },
+] as const;
+
 const ToursSection = () => {
   const { content } = useI18n();
   const section = content.home.tours;
@@ -93,6 +108,39 @@ const ToursSection = () => {
               </a>
             );
           })}
+        </div>
+
+        <div className="mt-12 grid grid-cols-1 lg:grid-cols-[1.3fr_0.7fr] gap-6">
+          <div className="rounded-2xl border border-border bg-card p-6 sm:p-8">
+            <p className="font-body text-sm uppercase tracking-[0.2em] text-secondary mb-3">Planning tips</p>
+            <h3 className="font-display text-2xl font-bold text-foreground mb-4">How to choose the right Southern experience</h3>
+            <div className="space-y-4">
+              {quickGuides.map((guide) => (
+                <div key={guide.title} className="border-b border-border last:border-b-0 pb-4 last:pb-0">
+                  <h4 className="font-display text-lg font-semibold text-foreground mb-1">{guide.title}</h4>
+                  <p className="font-body text-sm leading-relaxed text-muted-foreground">{guide.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-2xl border border-border bg-card p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <p className="font-body text-sm uppercase tracking-[0.2em] text-primary mb-3">Affiliate picks</p>
+              <h3 className="font-display text-2xl font-bold text-foreground mb-3">Reserve tours with flexible cancellation</h3>
+              <p className="font-body text-sm leading-relaxed text-muted-foreground mb-5">
+                Use our destination guides to compare the most-booked city walks, snorkeling trips, food tours, and sightseeing cruises before checkout.
+              </p>
+            </div>
+            <a
+              href={`${GYG}/s/?q=best+southern+usa+tours&${PARTNER}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block w-full bg-gradient-ocean px-6 py-4 rounded-full text-center font-body font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
+            >
+              Compare Top Southern Tours
+            </a>
+          </div>
         </div>
 
         <div className="text-center mt-12">
