@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import brandMark from "@/assets/southvoyage-icon.png";
 
 const PARTNER = "partner_id=0IQTGX8&utm_medium=online_publisher";
 const GYG = "https://www.getyourguide.com";
@@ -17,7 +18,8 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
           <div className="md:col-span-2 lg:col-span-1">
-            <Link to="/">
+            <Link to="/" className="inline-flex items-center gap-3">
+              <img src={brandMark} alt="SouthVoyage logo" className="h-11 w-11 object-contain" loading="lazy" width={1024} height={1024} />
               <span className="font-display text-2xl font-bold text-sand">
                 South<span className="text-primary">Voyage</span>
               </span>
