@@ -16,7 +16,7 @@ const TermsPage = () => {
     <>
       <Helmet>
         <title>Terms of Service — SouthVoyage</title>
-        <meta name="description" content="Review the SouthVoyage Terms of Service covering website use, affiliate links, third-party bookings, intellectual property, liability limitations, content accuracy, and acceptable use for our Southern USA travel guide." />
+        <meta name="description" content="SouthVoyage Terms of Service covering website use, affiliate links, bookings, intellectual property, and liability limits." />
         <meta name="keywords" content="southvoyage terms of service, travel website terms and conditions, affiliate disclaimer terms, southern usa travel guide legal terms" />
         <link rel="canonical" href="https://southvoyage.com/terms" />
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
