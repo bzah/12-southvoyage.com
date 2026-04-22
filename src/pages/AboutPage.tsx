@@ -71,17 +71,17 @@ const AboutPage = () => {
         <title>About SouthVoyage — Your Southern USA Travel Guide</title>
         <meta
           name="description"
-          content="SouthVoyage is your expert guide to the Southern United States. Discover curated tours, hotel recommendations, and travel guides for South Beach, Key West, New Orleans, Savannah & more."
+          content="Learn about SouthVoyage, a Southern USA travel guide focused on expert destination research, hotel recommendations, activity roundups, and local travel tips for South Beach Miami, Key West, New Orleans, Savannah, and South Padre Island."
         />
         <meta
           name="keywords"
-          content="about southvoyage, southern usa travel guide, south beach travel agency, key west travel guide, new orleans travel, savannah tourism"
+          content="about southvoyage, southern usa travel guide, south beach miami travel guide, key west travel guide, new orleans travel planning, savannah tourism guide, south padre island vacation planning, florida louisiana georgia texas travel"
         />
         <link rel="canonical" href="https://southvoyage.com/about" />
         <meta property="og:title" content="About SouthVoyage — Your Southern USA Travel Guide" />
         <meta
           property="og:description"
-          content="Expert travel guides, hotel reviews, and tour recommendations for the best destinations in the American South."
+          content="Discover how SouthVoyage curates destination guides, hotel reviews, booking tips, and activity recommendations for travelers exploring the American South."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://southvoyage.com/about" />

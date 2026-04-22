@@ -36,12 +36,12 @@ const Index = () => {
         <title>SouthVoyage — Best Tours, Hotels & Destinations in the South USA</title>
         <meta
           name="description"
-          content="Explore the American South: book top-rated tours in South Beach Miami, Key West, New Orleans & more. Find oceanfront hotels, activities & travel guides at SouthVoyage.com."
+          content="Explore the best of the American South with SouthVoyage. Compare South Beach Miami hotels, Key West snorkeling tours, New Orleans food experiences, Savannah getaways, and South Padre Island beach trips with expert travel tips, booking advice, and curated guides."
         />
-        <meta name="keywords" content="south beach hotels, south hotel, south padre island hotels, miami beach hotels, key west tours, new orleans tours, southern usa travel, oceanfront hotels south beach miami, best hotels south beach miami" />
+        <meta name="keywords" content="southern usa travel, south beach miami hotels, best hotels south beach miami, miami beach oceanfront hotels, key west tours, key west snorkeling, new orleans tours, french quarter food tours, south padre island hotels, savannah georgia travel guide, things to do in the american south, southern usa vacation ideas" />
         <link rel="canonical" href="https://southvoyage.com/" />
         <meta property="og:title" content="SouthVoyage — Discover the American South" />
-        <meta property="og:description" content="Book top-rated tours, hotels and activities across South Beach, Key West, New Orleans and more." />
+        <meta property="og:description" content="Find destination guides, hotel tips, food tours, beach escapes, and top-rated activities across South Beach, Key West, New Orleans, Savannah, and South Padre Island." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://southvoyage.com/" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>

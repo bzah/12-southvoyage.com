@@ -16,7 +16,8 @@ const PrivacyPolicyPage = () => {
     <>
       <Helmet>
         <title>Privacy Policy — SouthVoyage</title>
-        <meta name="description" content="SouthVoyage privacy policy. Learn how we collect, use, and protect your personal information when you visit our Southern USA travel guide website." />
+        <meta name="description" content="Read the SouthVoyage Privacy Policy to understand how we collect, use, store, and protect personal data, analytics information, cookies, and contact form details when you use our Southern USA travel guide website." />
+        <meta name="keywords" content="southvoyage privacy policy, travel website privacy policy, cookie and analytics policy, personal data protection travel site, southern usa travel website privacy" />
         <link rel="canonical" href="https://southvoyage.com/privacy" />
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
