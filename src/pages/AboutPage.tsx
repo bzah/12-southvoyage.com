@@ -1,9 +1,11 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { MapPin, Globe, Users, Shield, Compass, Heart } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useI18n } from "@/lib/i18n";
+import { buildAlternateLinks, getLanguagePath, ogLocaleByLanguage } from "@/lib/seo";
 
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
@@ -32,8 +34,11 @@ const icons = [Compass, Heart, Users, Globe] as const;
 const destinationSlugs = ["south-beach-miami", "key-west", "new-orleans", "south-padre-island", "savannah"] as const;
 
 const AboutPage = () => {
-  const { content } = useI18n();
+  const { content, language } = useI18n();
+  const location = useLocation();
   const about = content.about;
+  const canonicalUrl = getLanguagePath(location.pathname, language);
+  const alternateLinks = buildAlternateLinks(location.pathname);
 
   const businessJsonLd = {
     ...localBusinessJsonLd,
@@ -62,11 +67,15 @@ const AboutPage = () => {
         <title>{about.metaTitle}</title>
         <meta name="description" content={about.metaDescription} />
         <meta name="keywords" content={about.metaKeywords} />
-        <link rel="canonical" href="https://southvoyage.com/about" />
+        <link rel="canonical" href={canonicalUrl} />
+        {alternateLinks.map((link) => (
+          <link key={link.hrefLang} rel="alternate" hrefLang={link.hrefLang} href={link.href} />
+        ))}
         <meta property="og:title" content={about.metaTitle} />
         <meta property="og:description" content={about.ogDescription} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://southvoyage.com/about" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:locale" content={ogLocaleByLanguage[language]} />
         <script type="application/ld+json">{JSON.stringify(businessJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(aboutPageJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>

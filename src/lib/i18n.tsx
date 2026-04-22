@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import { useSearchParams } from "react-router-dom";
 import { languageNames, languages, translations, type Language } from "@/lib/translations";
 
 type Direction = "ltr" | "rtl";
@@ -25,8 +26,11 @@ const getDirection = (language: Language): Direction => {
 const I18nContext = createContext<I18nContextValue | undefined>(undefined);
 
 export const I18nProvider = ({ children }: { children: ReactNode }) => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [language, setLanguage] = useState<Language>(() => {
     if (typeof window === "undefined") return "en";
+    const urlLanguage = new URLSearchParams(window.location.search).get("lang");
+    if (isLanguage(urlLanguage)) return urlLanguage;
     const stored = window.localStorage.getItem(STORAGE_KEY);
     return isLanguage(stored) ? stored : "en";
   });
@@ -40,15 +44,48 @@ export const I18nProvider = ({ children }: { children: ReactNode }) => {
     document.body.dir = dir;
   }, [dir, language]);
 
+  useEffect(() => {
+    const urlLanguage = searchParams.get("lang");
+    if (isLanguage(urlLanguage) && urlLanguage !== language) {
+      setLanguage(urlLanguage);
+      return;
+    }
+
+    if (!urlLanguage && language !== "en") {
+      const nextParams = new URLSearchParams(searchParams);
+      nextParams.set("lang", language);
+      setSearchParams(nextParams, { replace: true });
+    }
+
+    if (urlLanguage === "en") {
+      const nextParams = new URLSearchParams(searchParams);
+      nextParams.delete("lang");
+      setSearchParams(nextParams, { replace: true });
+    }
+  }, [language, searchParams, setSearchParams]);
+
+  const handleSetLanguage = (nextLanguage: Language) => {
+    setLanguage(nextLanguage);
+    const nextParams = new URLSearchParams(searchParams);
+
+    if (nextLanguage === "en") {
+      nextParams.delete("lang");
+    } else {
+      nextParams.set("lang", nextLanguage);
+    }
+
+    setSearchParams(nextParams, { replace: false });
+  };
+
   const value = useMemo<I18nContextValue>(
     () => ({
       language,
-      setLanguage,
+      setLanguage: handleSetLanguage,
       dir,
       languageNames,
       content: translations[language],
     }),
-    [dir, language],
+    [dir, language, searchParams],
   );
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
