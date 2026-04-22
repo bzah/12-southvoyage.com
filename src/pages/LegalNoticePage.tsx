@@ -17,7 +17,7 @@ const LegalNoticePage = () => {
     <>
       <Helmet>
         <title>Legal Notice (Impressum) — SouthVoyage</title>
-        <meta name="description" content="Read the SouthVoyage Legal Notice and Impressum with website operator details, affiliate disclosures, external link responsibilities, copyright information, and liability disclaimers for our travel content." />
+        <meta name="description" content="SouthVoyage Legal Notice and Impressum with operator details, affiliate disclosure, copyright, and liability information." />
         <meta name="keywords" content="southvoyage legal notice, impressum southvoyage, affiliate disclosure travel website, liability disclaimer, website operator information" />
         <link rel="canonical" href="https://southvoyage.com/legal" />
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>

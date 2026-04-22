@@ -16,7 +16,7 @@ const DmcaPage = () => {
     <>
       <Helmet>
         <title>DMCA Policy — SouthVoyage</title>
-        <meta name="description" content="Review the SouthVoyage DMCA Policy for copyright complaints, takedown requests, counter-notifications, repeat infringement procedures, and designated contact details for intellectual property concerns." />
+        <meta name="description" content="SouthVoyage DMCA Policy for copyright complaints, takedown notices, counter-notifications, and intellectual property contacts." />
         <meta name="keywords" content="southvoyage dmca policy, copyright infringement notice, dmca takedown request, counter notification policy, website copyright complaint" />
         <link rel="canonical" href="https://southvoyage.com/dmca" />
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>

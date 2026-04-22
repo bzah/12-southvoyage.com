@@ -52,7 +52,7 @@ export const destinations: Destination[] = [
     tagline: "Sun, Style & Art Deco Glamour",
     heroImage: destMiamiBeach,
     metaTitle: "South Beach Miami Travel Guide 2026 — Hotels, Tours & Things to Do",
-    metaDescription: "Complete South Beach Miami travel guide with oceanfront hotel tips, Art Deco walking tours, beach clubs, nightlife ideas, seasonal booking advice, and top things to do for first-time and repeat visitors.",
+    metaDescription: "South Beach Miami travel guide with oceanfront hotels, Art Deco tours, nightlife, beach tips, and top things to do.",
     keywords: "south beach hotels, south beach miami, oceanfront hotels south beach miami, best hotels in south beach miami, miami beach oceanfront hotels, south beach tours, things to do south beach miami, art deco district miami, where to stay in south beach, south beach nightlife guide",
     introText: "South Beach is Miami's crown jewel — a world-famous stretch of white sand, turquoise water, and iconic Art Deco architecture that has captivated travelers for decades. Whether you're seeking luxury oceanfront resorts, vibrant nightlife on Ocean Drive, or a relaxing day under the palms, South Beach delivers an experience like no other destination in the United States.",
     sections: [
@@ -103,7 +103,7 @@ export const destinations: Destination[] = [
     tagline: "America's Tropical Paradise",
     heroImage: destKeyWest,
     metaTitle: "Key West Travel Guide 2026 — Tours, Activities & Best Hotels",
-    metaDescription: "Plan your Key West vacation with snorkeling advice, sunset cruise tips, hotel area recommendations, reef tour ideas, historic attractions, and seasonal travel planning for one of Florida's best island getaways.",
+    metaDescription: "Key West travel guide with snorkeling tips, sunset cruises, hotel areas, reef tours, and historic attractions.",
     keywords: "key west tours, things to do key west, key west hotels, key west snorkeling, key west activities, key west florida, key west attractions, best key west tours, key west sunset cruise, key west travel guide 2026",
     introText: "Key West is the southernmost point of the continental United States — a sun-drenched island paradise where colorful Victorian houses line palm-shaded streets, legendary sunsets paint the sky every evening, and crystal-clear waters teem with tropical marine life. Just 4 miles long and 1 mile wide, this small island packs an enormous amount of charm, history, and adventure.",
     sections: [
@@ -153,7 +153,7 @@ export const destinations: Destination[] = [
     tagline: "Where Every Street Tells a Story",
     heroImage: destNewOrleans,
     metaTitle: "New Orleans Travel Guide 2026 — Tours, Food & Things to Do",
-    metaDescription: "Discover New Orleans with French Quarter tours, Creole and Cajun food tips, jazz clubs, historic neighborhoods, hotel advice, and local booking strategies for a richer 2026 travel experience.",
+    metaDescription: "New Orleans travel guide with French Quarter tours, Creole food tips, jazz clubs, hotel advice, and local highlights.",
     keywords: "new orleans tours, things to do new orleans, french quarter food tour, new orleans activities, new orleans hotels, new orleans travel guide, cajun food tour new orleans, new orleans jazz, where to stay in new orleans, new orleans itinerary",
     introText: "New Orleans is America's most culturally rich city — a place where French, African, Spanish, and Caribbean influences have fused into something entirely unique. From the wrought-iron balconies of the French Quarter to the jazz-filled streets of Frenchmen Street, from the legendary beignets at Café Du Monde to the vibrant energy of Mardi Gras, New Orleans is a feast for every sense.",
     sections: [
@@ -204,7 +204,7 @@ export const destinations: Destination[] = [
     tagline: "Texas' Premier Beach Escape",
     heroImage: destSouthPadre,
     metaTitle: "South Padre Island Travel Guide 2026 — Hotels, Tours & Activities",
-    metaDescription: "Plan your South Padre Island vacation with beachfront hotel comparisons, dolphin watching tours, fishing charters, family beach tips, seasonal travel advice, and recommendations for the best areas to stay.",
+    metaDescription: "South Padre Island travel guide with beachfront hotels, dolphin tours, fishing charters, family beach tips, and best areas.",
     keywords: "south padre island hotels, south padre island tours, things to do south padre island, south padre island activities, south padre island vacation, south padre island beach, south padre island texas, beachfront condos south padre island, family travel south padre island",
     introText: "South Padre Island is a 34-mile barrier island off the southern tip of Texas, known for its warm Gulf waters, sugar-white sand beaches, and incredible wildlife. Whether you're a family seeking dolphin-watching adventures, a couple looking for a romantic beach getaway, or a group of friends ready for water sports and nightlife, South Padre Island offers an authentic, uncrowded beach experience that larger Florida destinations can't match.",
     sections: [
@@ -254,7 +254,7 @@ export const destinations: Destination[] = [
     tagline: "The Jewel of the South",
     heroImage: destSavannah,
     metaTitle: "Savannah GA Travel Guide 2026 — Tours, Hotels & Things to Do",
-    metaDescription: "Explore Savannah, Georgia with trolley tours, historic squares, Southern food recommendations, haunted walks, hotel advice, and itinerary ideas for a romantic weekend or culture-filled city break.",
+    metaDescription: "Savannah travel guide with trolley tours, historic squares, Southern food, haunted walks, hotel tips, and weekend ideas.",
     keywords: "savannah tours, things to do savannah, savannah hotels, savannah georgia, savannah trolley tour, savannah ghost tour, savannah travel guide, historic savannah, weekend in savannah georgia, savannah itinerary",
     introText: "Savannah is the most enchanting city in the American South — a place where centuries-old oak trees draped in Spanish moss shade 22 meticulously preserved garden squares, horse-drawn carriages clip-clop along cobblestone streets, and every corner reveals another layer of history, beauty, and Southern charm. Founded in 1733, Savannah is Georgia's oldest city and one of the most beautiful in the United States.",
     sections: [

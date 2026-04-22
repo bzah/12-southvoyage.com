@@ -35,7 +35,7 @@ export const blogPosts: BlogPost[] = [
     date: "April 2, 2026",
     readTime: "8 min read",
     category: "Hotels",
-    metaDescription: "Discover the best hotels in South Beach Miami for 2026 with oceanfront resort picks, boutique Art Deco stays, budget-friendly options, neighborhood tips, and smart booking advice for every travel style.",
+    metaDescription: "Best hotels in South Beach Miami for 2026: oceanfront resorts, Art Deco boutique stays, budget picks, and booking tips.",
     keywords: "best hotels south beach miami, south beach hotels, oceanfront hotels south beach miami, south beach miami hotel, miami beach oceanfront hotels, where to stay in south beach miami, boutique hotels south beach",
     relatedDestinationSlug: "south-beach-miami",
     faqs: [
@@ -53,7 +53,7 @@ export const blogPosts: BlogPost[] = [
     date: "April 4, 2026",
     readTime: "10 min read",
     category: "Hotels",
-    metaDescription: "Complete guide to Miami Beach oceanfront hotels comparing Collins Avenue and Ocean Drive, room categories, best booking seasons, resort fees, parking costs, and where to find the best ocean-view value.",
+    metaDescription: "Miami Beach oceanfront hotels guide: Collins Avenue vs Ocean Drive, room types, resort fees, parking, and booking tips.",
     keywords: "miami beach oceanfront hotels, oceanfront hotels miami beach, miami beach hotels ocean view, collins avenue hotels miami, ocean drive hotels miami beach, beachfront hotels miami, miami beach resort fees, where to stay miami beach",
     relatedDestinationSlug: "south-beach-miami",
     faqs: [
@@ -71,7 +71,7 @@ export const blogPosts: BlogPost[] = [
     date: "April 3, 2026",
     readTime: "11 min read",
     category: "Food & Dining",
-    metaDescription: "Discover the best restaurants in the New Orleans French Quarter with classic Creole dining, famous brunch spots, local favorites, romantic dinner picks, and must-try dishes for first-time visitors and food lovers.",
+    metaDescription: "Best restaurants in the New Orleans French Quarter for Creole classics, brunch spots, local favorites, and first-time dining tips.",
     keywords: "best restaurants new orleans french quarter, french quarter restaurants, new orleans restaurants, where to eat french quarter, best food new orleans, cajun restaurants french quarter, creole restaurants new orleans, french quarter dining guide",
     relatedDestinationSlug: "new-orleans",
     faqs: [
@@ -88,7 +88,7 @@ export const blogPosts: BlogPost[] = [
     date: "April 1, 2026",
     readTime: "9 min read",
     category: "Activities",
-    metaDescription: "Learn the best time to snorkel in Key West with month-by-month advice on water clarity, reef conditions, marine life, tour prices, best snorkeling spots, and practical beginner tips before you book.",
+    metaDescription: "Key West snorkeling guide with the best time to go, reef conditions, tour prices, top spots, and beginner tips.",
     keywords: "key west snorkeling best time, key west snorkeling, best snorkeling key west, key west reef snorkeling, when to snorkel key west, key west snorkeling tours, key west coral reef guide, beginner snorkeling key west",
     relatedDestinationSlug: "key-west",
     faqs: [
@@ -106,7 +106,7 @@ export const blogPosts: BlogPost[] = [
     date: "March 28, 2026",
     readTime: "7 min read",
     category: "Hotels",
-    metaDescription: "Learn how to choose the best hotels near South Padre Island with advice on beachfront condos, family resorts, neighborhood differences, travel seasons, budget ranges, and what to book for couples, families, or groups.",
+    metaDescription: "How to choose South Padre Island hotels, beachfront condos, family resorts, best areas, and seasonal booking tips.",
     keywords: "south padre island hotels, hotels near south padre island, south padre island resorts, best hotels south padre island, beachfront condos south padre island, where to stay south padre island",
     relatedDestinationSlug: "south-padre-island",
     faqs: [
@@ -123,7 +123,7 @@ export const blogPosts: BlogPost[] = [
     date: "March 20, 2026",
     readTime: "6 min read",
     category: "Tours",
-    metaDescription: "Explore the best food tours in New Orleans with French Quarter tastings, Cajun cooking classes, Creole food walks, local guide recommendations, and practical booking tips for visitors who want to eat well.",
+    metaDescription: "Best food tours in New Orleans with French Quarter tastings, Cajun classes, local picks, and booking tips.",
     keywords: "new orleans food tours, french quarter food tour, new orleans tours, cajun food tour new orleans, creole food tour new orleans, best food tours in new orleans",
     relatedDestinationSlug: "new-orleans",
     faqs: [
@@ -140,7 +140,7 @@ export const blogPosts: BlogPost[] = [
     date: "March 15, 2026",
     readTime: "9 min read",
     category: "Activities",
-    metaDescription: "Discover the best things to do in Key West, Florida with snorkeling trips, sunset cruises, historic attractions, beach stops, water sports, and practical planning tips for a fun, easy island itinerary.",
+    metaDescription: "Best things to do in Key West, Florida, including snorkeling, sunset cruises, historic sights, and island itinerary tips.",
     keywords: "things to do key west, key west activities, key west tours, key west snorkeling, best key west attractions, key west itinerary, key west sunset cruise",
     relatedDestinationSlug: "key-west",
     faqs: [
@@ -157,7 +157,7 @@ export const blogPosts: BlogPost[] = [
     date: "March 10, 2026",
     readTime: "8 min read",
     category: "Travel Guide",
-    metaDescription: "Plan the perfect weekend in Savannah, Georgia with a day-by-day itinerary covering trolley tours, historic squares, Southern restaurants, ghost tours, hotel areas, and an easy Tybee Island add-on.",
+    metaDescription: "Perfect weekend in Savannah, Georgia, with trolley tours, historic squares, food spots, ghost tours, and hotel tips.",
     keywords: "weekend in savannah georgia, savannah itinerary, things to do savannah weekend, savannah travel guide, savannah georgia trip, savannah 2 day itinerary, romantic weekend savannah, savannah hotel guide",
     relatedDestinationSlug: "savannah",
     faqs: [

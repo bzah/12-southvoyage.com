@@ -26,7 +26,7 @@ export const translations = {
     home: {
       metaTitle: "SouthVoyage — Best Tours, Hotels & Destinations in the South USA",
       metaDescription:
-        "Explore the best of the American South with SouthVoyage. Compare South Beach Miami hotels, Key West snorkeling tours, New Orleans food experiences, Savannah getaways, and South Padre Island beach trips with expert travel tips, booking advice, and curated guides.",
+        "Southern USA travel guide with South Beach hotels, Key West tours, New Orleans food, Savannah trips, and South Padre Island tips.",
       metaKeywords:
         "southern usa travel, south beach miami hotels, best hotels south beach miami, miami beach oceanfront hotels, key west tours, key west snorkeling, new orleans tours, french quarter food tours, south padre island hotels, savannah georgia travel guide, things to do in the american south, southern usa vacation ideas",
       ogTitle: "SouthVoyage — Discover the American South",
@@ -205,7 +205,7 @@ export const translations = {
     about: {
       metaTitle: "About SouthVoyage — Your Southern USA Travel Guide",
       metaDescription:
-        "Learn about SouthVoyage, a Southern USA travel guide focused on expert destination research, hotel recommendations, activity roundups, and local travel tips for South Beach Miami, Key West, New Orleans, Savannah, and South Padre Island.",
+        "About SouthVoyage, your Southern USA travel guide for South Beach, Key West, New Orleans, Savannah, and South Padre Island.",
       metaKeywords:
         "about southvoyage, southern usa travel guide, south beach miami travel guide, key west travel guide, new orleans travel planning, savannah tourism guide, south padre island vacation planning, florida louisiana georgia texas travel",
       ogDescription:
@@ -299,7 +299,7 @@ export const translations = {
     contact: {
       metaTitle: "Contact Us — SouthVoyage",
       metaDescription:
-        "Contact SouthVoyage for Southern USA travel questions, hotel and tour recommendations, partnership inquiries, press requests, content updates, or destination corrections related to South Beach, Key West, New Orleans, Savannah, and more.",
+        "Contact SouthVoyage for Southern USA travel tips, hotel and tour recommendations, partnerships, press, and content corrections.",
       metaKeywords:
         "contact southvoyage, southern usa travel help, south beach travel questions, key west travel advice, new orleans travel contact, partnership inquiries southvoyage, travel guide corrections",
       heroEyebrow: "Contact",
@@ -356,7 +356,7 @@ export const translations = {
     home: {
       metaTitle: "SouthVoyage — Mejores tours, hoteles y destinos del sur de EE. UU.",
       metaDescription:
-        "Explora lo mejor del sur de Estados Unidos con SouthVoyage. Compara hoteles en South Beach Miami, tours de snorkel en Key West, experiencias gastronómicas en Nueva Orleans, escapadas a Savannah y viajes a South Padre Island con consejos expertos.",
+        "Guía del sur de EE. UU. con hoteles en South Beach, tours en Key West, comida en Nueva Orleans y consejos para Savannah y South Padre Island.",
       metaKeywords:
         "viajes sur de estados unidos, hoteles south beach miami, mejores hoteles south beach, hoteles frente al mar miami beach, tours key west, snorkel key west, tours nueva orleans, food tours french quarter, hoteles south padre island, guía savannah georgia",
       ogTitle: "SouthVoyage — Descubre el sur de Estados Unidos",
@@ -499,7 +499,7 @@ export const translations = {
     about: {
       metaTitle: "Sobre SouthVoyage — Tu guía del sur de EE. UU.",
       metaDescription:
-        "Conoce SouthVoyage, una guía de viaje del sur de Estados Unidos centrada en investigación experta de destinos, recomendaciones de hoteles, actividades y consejos locales para South Beach Miami, Key West, Nueva Orleans, Savannah y South Padre Island.",
+        "Conoce SouthVoyage, tu guía del sur de EE. UU. para South Beach, Key West, Nueva Orleans, Savannah y South Padre Island.",
       metaKeywords:
         "sobre southvoyage, guía de viaje sur de estados unidos, guía south beach miami, guía key west, viaje nueva orleans, guía turismo savannah, vacaciones south padre island",
       ogDescription:
@@ -587,7 +587,7 @@ export const translations = {
     contact: {
       metaTitle: "Contacto — SouthVoyage",
       metaDescription:
-        "Contacta con SouthVoyage para preguntas sobre viajes por el sur de EE. UU., recomendaciones de hoteles y tours, colaboraciones, prensa, actualizaciones de contenido o correcciones de destinos relacionadas con South Beach, Key West, Nueva Orleans, Savannah y más.",
+        "Contacta con SouthVoyage para viajes por el sur de EE. UU., hoteles, tours, colaboraciones, prensa y correcciones de contenido.",
       metaKeywords:
         "contacto southvoyage, ayuda viajes sur de estados unidos, preguntas south beach, consejos key west, contacto nueva orleans, colaboraciones southvoyage",
       heroEyebrow: "Contacto",
@@ -632,7 +632,7 @@ export const translations = {
     home: {
       metaTitle: "SouthVoyage — Meilleurs tours, hôtels et destinations du sud des États-Unis",
       metaDescription:
-        "Explorez le meilleur du sud des États-Unis avec SouthVoyage. Comparez les hôtels de South Beach Miami, les sorties snorkeling à Key West, les expériences culinaires à La Nouvelle-Orléans, les escapades à Savannah et les séjours à South Padre Island avec des conseils experts.",
+        "Guide du sud des États-Unis avec hôtels à South Beach, tours à Key West, food à La Nouvelle-Orléans et conseils pour Savannah.",
       metaKeywords:
         "voyage sud des états-unis, hôtels south beach miami, meilleurs hôtels south beach, hôtels front de mer miami beach, tours key west, snorkeling key west, tours nouvelle-orléans, hôtels south padre island, guide savannah georgie",
       ogTitle: "SouthVoyage — Découvrez le sud des États-Unis",
@@ -775,7 +775,7 @@ export const translations = {
     about: {
       metaTitle: "À propos de SouthVoyage — Votre guide du sud des États-Unis",
       metaDescription:
-        "Découvrez SouthVoyage, un guide de voyage consacré au sud des États-Unis avec des recherches expertes, des recommandations d'hôtels, des idées d'activités et des conseils locaux pour South Beach Miami, Key West, La Nouvelle-Orléans, Savannah et South Padre Island.",
+        "Découvrez SouthVoyage, votre guide du sud des États-Unis pour South Beach, Key West, La Nouvelle-Orléans, Savannah et South Padre Island.",
       metaKeywords:
         "à propos southvoyage, guide voyage sud états-unis, guide south beach miami, guide key west, voyage nouvelle-orléans, guide savannah, vacances south padre island",
       ogDescription:
@@ -863,7 +863,7 @@ export const translations = {
     contact: {
       metaTitle: "Contact — SouthVoyage",
       metaDescription:
-        "Contactez SouthVoyage pour toute question sur les voyages dans le sud des États-Unis, recommandations d'hôtels et de tours, partenariats, presse, mise à jour de contenu ou correction de destination liée à South Beach, Key West, La Nouvelle-Orléans, Savannah et plus encore.",
+        "Contactez SouthVoyage pour voyages dans le sud des États-Unis, hôtels, tours, partenariats, presse et corrections de contenu.",
       metaKeywords:
         "contact southvoyage, aide voyage sud états-unis, questions south beach, conseils key west, contact nouvelle-orléans, partenariats southvoyage",
       heroEyebrow: "Contact",
@@ -908,7 +908,7 @@ export const translations = {
     home: {
       metaTitle: "SouthVoyage — лучшие туры, отели и направления юга США",
       metaDescription:
-        "Откройте для себя лучшее на юге США вместе с SouthVoyage. Сравнивайте отели South Beach Miami, снорклинг-туры в Key West, гастрономические впечатления в Новом Орлеане, поездки в Savannah и South Padre Island с экспертными советами.",
+        "Гид по югу США: отели South Beach, туры Key West, еда New Orleans и советы для Savannah и South Padre Island.",
       metaKeywords:
         "путешествия по югу сша, отели south beach miami, лучшие отели south beach, отели у океана miami beach, туры key west, снорклинг key west, туры new orleans, отели south padre island, гид savannah",
       ogTitle: "SouthVoyage — откройте юг США",
@@ -1051,7 +1051,7 @@ export const translations = {
     about: {
       metaTitle: "О SouthVoyage — ваш гид по югу США",
       metaDescription:
-        "Узнайте о SouthVoyage — путеводителе по югу США с экспертным анализом направлений, рекомендациями по отелям, подборками активностей и локальными советами для South Beach Miami, Key West, Нового Орлеана, Savannah и South Padre Island.",
+        "Узнайте о SouthVoyage — гиде по югу США для South Beach, Key West, New Orleans, Savannah и South Padre Island.",
       metaKeywords:
         "о southvoyage, гид по югу сша, гид south beach miami, гид key west, путешествие new orleans, гид savannah, отдых south padre island",
       ogDescription:
@@ -1139,7 +1139,7 @@ export const translations = {
     contact: {
       metaTitle: "Контакты — SouthVoyage",
       metaDescription:
-        "Свяжитесь с SouthVoyage по вопросам путешествий по югу США, рекомендаций по отелям и турам, партнерств, прессы, обновления контента или исправления информации о South Beach, Key West, Новом Орлеане, Savannah и других направлениях.",
+        "Свяжитесь с SouthVoyage по поездкам по югу США, отелям, турам, партнерствам, прессе и исправлениям контента.",
       metaKeywords:
         "контакты southvoyage, помощь по путешествиям юг сша, вопросы south beach, советы key west, контакты new orleans, партнерство southvoyage",
       heroEyebrow: "Контакты",
